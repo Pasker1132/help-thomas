@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="UTF-8" />
+  <script
+    type="text/javascript">(window.NREUM || (NREUM = {})).init = { ajax: { deny_list: ["bam.nr-data.net"] } }; (window.NREUM || (NREUM = {})).loader_config = { licenseKey: "5f5eb1549e", applicationID: "54686334" };;/*! For license information please see nr-loader-rum-1.283.2.min.js.LICENSE.txt */
+      (() => { var e, t, r = { 122: (e, t, r) => { "use strict"; r.d(t, { a: () => i }); var n = r(944); function i(e, t) { try { if (!e || "object" != typeof e) return (0, n.R)(3); if (!t || "object" != typeof t) return (0, n.R)(4); const r = Object.create(Object.getPrototypeOf(t), Object.getOwnPropertyDescriptors(t)), o = 0 === Object.keys(r).length ? e : r; for (let a in o) if (void 0 !== e[a]) try { if (null === e[a]) { r[a] = null; continue } Array.isArray(e[a]) && Array.isArray(t[a]) ? r[a] = Array.from(new Set([...e[a], ...t[a]])) : "object" == typeof e[a] && "object" == typeof t[a] ? r[a] = i(e[a], t[a]) : r[a] = e[a] } catch (e) { (0, n.R)(1, e) } return r } catch (e) { (0, n.R)(2, e) } } }, 555: (e, t, r) => { "use strict"; r.d(t, { Vp: () => c, fn: () => s, x1: () => u }); var n = r(384), i = r(122); const o = { beacon: n.NT.beacon, errorBeacon: n.NT.errorBeacon, licenseKey: void 0, applicationID: void 0, sa: void 0, queueTime: void 0, applicationTime: void 0, ttGuid: void 0, user: void 0, account: void 0, product: void 0, extra: void 0, jsAttributes: {}, userAttributes: void 0, atts: void 0, transactionName: void 0, tNamePlain: void 0 }, a = {}; function s(e) { try { const t = c(e); return !!t.licenseKey && !!t.errorBeacon && !!t.applicationID } catch (e) { return !1 } } function c(e) { if (!e) throw new Error("All info objects require an agent identifier!"); if (!a[e]) throw new Error("Info for ".concat(e, " was never set")); return a[e] } function u(e, t) { if (!e) throw new Error("All info objects require an agent identifier!"); a[e] = (0, i.a)(t, o); const r = (0, n.nY)(e); r && (r.info = a[e]) } }, 217: (e, t, r) => { "use strict"; r.d(t, { D0: () => m, gD: () => v, xN: () => h }); r(860).K7.genericEvents; const n = "experimental.marks", i = "experimental.measures", o = "experimental.resources", a = e => { if (!e || "string" != typeof e) return !1; try { document.createDocumentFragment().querySelector(e) } catch { return !1 } return !0 }; var s = r(614), c = r(944), u = r(384), l = r(122); const d = "[data-nr-mask]", f = () => { const e = { feature_flags: [], experimental: { marks: !1, measures: !1, resources: !1 }, mask_selector: "*", block_selector: "[data-nr-block]", mask_input_options: { color: !1, date: !1, "datetime-local": !1, email: !1, month: !1, number: !1, range: !1, search: !1, tel: !1, text: !1, time: !1, url: !1, week: !1, textarea: !1, select: !1, password: !0 } }; return { ajax: { deny_list: void 0, block_internal: !0, enabled: !0, autoStart: !0 }, distributed_tracing: { enabled: void 0, exclude_newrelic_header: void 0, cors_use_newrelic_header: void 0, cors_use_tracecontext_headers: void 0, allowed_origins: void 0 }, get feature_flags() { return e.feature_flags }, set feature_flags(t) { e.feature_flags = t }, generic_events: { enabled: !0, autoStart: !0 }, harvest: { interval: 30 }, jserrors: { enabled: !0, autoStart: !0 }, logging: { enabled: !0, autoStart: !0 }, metrics: { enabled: !0, autoStart: !0 }, obfuscate: void 0, page_action: { enabled: !0 }, page_view_event: { enabled: !0, autoStart: !0 }, page_view_timing: { enabled: !0, autoStart: !0 }, performance: { get capture_marks() { return e.feature_flags.includes(n) || e.experimental.marks }, set capture_marks(t) { e.experimental.marks = t }, get capture_measures() { return e.feature_flags.includes(i) || e.experimental.measures }, set capture_measures(t) { e.experimental.measures = t }, capture_detail: !0, resources: { get enabled() { return e.feature_flags.includes(o) || e.experimental.resources }, set enabled(t) { e.experimental.resources = t }, asset_types: [], first_party_domains: [], ignore_newrelic: !0 } }, privacy: { cookies_enabled: !0 }, proxy: { assets: void 0, beacon: void 0 }, session: { expiresMs: s.wk, inactiveMs: s.BB }, session_replay: { autoStart: !0, enabled: !1, preload: !1, sampling_rate: 10, error_sampling_rate: 100, collect_fonts: !1, inline_images: !1, fix_stylesheets: !0, mask_all_inputs: !0, get mask_text_selector() { return e.mask_selector }, set mask_text_selector(t) { a(t) ? e.mask_selector = "".concat(t, ",").concat(d) : "" === t || null === t ? e.mask_selector = d : (0, c.R)(5, t) }, get block_class() { return "nr-block" }, get ignore_class() { return "nr-ignore" }, get mask_text_class() { return "nr-mask" }, get block_selector() { return e.block_selector }, set block_selector(t) { a(t) ? e.block_selector += ",".concat(t) : "" !== t && (0, c.R)(6, t) }, get mask_input_options() { return e.mask_input_options }, set mask_input_options(t) { t && "object" == typeof t ? e.mask_input_options = { ...t, password: !0 } : (0, c.R)(7, t) } }, session_trace: { enabled: !0, autoStart: !0 }, soft_navigations: { enabled: !0, autoStart: !0 }, spa: { enabled: !0, autoStart: !0 }, ssl: void 0, user_actions: { enabled: !0, elementAttributes: ["id", "className", "tagName", "type"] } } }, g = {}, p = "All configuration objects require an agent identifier!"; function m(e) { if (!e) throw new Error(p); if (!g[e]) throw new Error("Configuration for ".concat(e, " was never set")); return g[e] } function h(e, t) { if (!e) throw new Error(p); g[e] = (0, l.a)(t, f()); const r = (0, u.nY)(e); r && (r.init = g[e]) } function v(e, t) { if (!e) throw new Error(p); var r = m(e); if (r) { for (var n = t.split("."), i = 0; i < n.length - 1; i++)if ("object" != typeof (r = r[n[i]])) return; r = r[n[n.length - 1]] } return r } }, 371: (e, t, r) => { "use strict"; r.d(t, { V: () => f, f: () => d }); var n = r(122), i = r(384), o = r(154), a = r(324); let s = 0; const c = { buildEnv: a.F3, distMethod: a.Xs, version: a.xv, originTime: o.WN }, u = { customTransaction: void 0, disabled: !1, isolatedBacklog: !1, loaderType: void 0, maxBytes: 3e4, onerror: void 0, ptid: void 0, releaseIds: {}, appMetadata: {}, session: void 0, denyList: void 0, timeKeeper: void 0, obfuscator: void 0, harvester: void 0 }, l = {}; function d(e) { if (!e) throw new Error("All runtime objects require an agent identifier!"); if (!l[e]) throw new Error("Runtime for ".concat(e, " was never set")); return l[e] } function f(e, t) { if (!e) throw new Error("All runtime objects require an agent identifier!"); l[e] = { ...(0, n.a)(t, u), ...c }, Object.hasOwnProperty.call(l[e], "harvestCount") || Object.defineProperty(l[e], "harvestCount", { get: () => ++s }); const r = (0, i.nY)(e); r && (r.runtime = l[e]) } }, 324: (e, t, r) => { "use strict"; r.d(t, { F3: () => i, Xs: () => o, xv: () => n }); const n = "1.283.2", i = "PROD", o = "CDN" }, 154: (e, t, r) => { "use strict"; r.d(t, { OF: () => c, RI: () => i, WN: () => l, bv: () => o, gm: () => a, mw: () => s, sb: () => u }); var n = r(863); const i = "undefined" != typeof window && !!window.document, o = "undefined" != typeof WorkerGlobalScope && ("undefined" != typeof self && self instanceof WorkerGlobalScope && self.navigator instanceof WorkerNavigator || "undefined" != typeof globalThis && globalThis instanceof WorkerGlobalScope && globalThis.navigator instanceof WorkerNavigator), a = i ? window : "undefined" != typeof WorkerGlobalScope && ("undefined" != typeof self && self instanceof WorkerGlobalScope && self || "undefined" != typeof globalThis && globalThis instanceof WorkerGlobalScope && globalThis), s = Boolean("hidden" === a?.document?.visibilityState), c = /iPad|iPhone|iPod/.test(a.navigator?.userAgent), u = c && "undefined" == typeof SharedWorker, l = ((() => { const e = a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/); Array.isArray(e) && e.length >= 2 && e[1] })(), Date.now() - (0, n.t)()) }, 687: (e, t, r) => { "use strict"; r.d(t, { Ak: () => c, Ze: () => d, x3: () => u }); var n = r(836), i = r(606), o = r(860), a = r(646); const s = {}; function c(e, t) { const r = { staged: !1, priority: o.P3[t] || 0 }; l(e), s[e].get(t) || s[e].set(t, r) } function u(e, t) { e && s[e] && (s[e].get(t) && s[e].delete(t), g(e, t, !1), s[e].size && f(e)) } function l(e) { if (!e) throw new Error("agentIdentifier required"); s[e] || (s[e] = new Map) } function d(e = "", t = "feature", r = !1) { if (l(e), !e || !s[e].get(t) || r) return g(e, t); s[e].get(t).staged = !0, f(e) } function f(e) { const t = Array.from(s[e]); t.every((([e, t]) => t.staged)) && (t.sort(((e, t) => e[1].priority - t[1].priority)), t.forEach((([t]) => { s[e].delete(t), g(e, t) }))) } function g(e, t, r = !0) { const o = e ? n.ee.get(e) : n.ee, s = i.i.handlers; if (!o.aborted && o.backlog && s) { if (r) { const e = o.backlog[t], r = s[t]; if (r) { for (let t = 0; e && t < e.length; ++t)p(e[t], r); Object.entries(r).forEach((([e, t]) => { Object.values(t || {}).forEach((t => { t[0]?.on && t[0]?.context() instanceof a.y && t[0].on(e, t[1]) })) })) } } o.isolatedBacklog || delete s[t], o.backlog[t] = null, o.emit("drain-" + t, []) } } function p(e, t) { var r = e[1]; Object.values(t[r] || {}).forEach((t => { var r = e[0]; if (t[0] === r) { var n = t[1], i = e[3], o = e[2]; n.apply(i, o) } })) } }, 836: (e, t, r) => { "use strict"; r.d(t, { P: () => c, ee: () => u }); var n = r(384), i = r(990), o = r(371), a = r(646), s = r(607); const c = "nr@context:".concat(s.W), u = function e(t, r) { var n = {}, s = {}, l = {}, d = !1; try { d = 16 === r.length && (0, o.f)(r).isolatedBacklog } catch (e) { } var f = { on: p, addEventListener: p, removeEventListener: function (e, t) { var r = n[e]; if (!r) return; for (var i = 0; i < r.length; i++)r[i] === t && r.splice(i, 1) }, emit: function (e, r, n, i, o) { !1 !== o && (o = !0); if (u.aborted && !i) return; t && o && t.emit(e, r, n); for (var a = g(n), c = m(e), l = c.length, d = 0; d < l; d++)c[d].apply(a, r); var p = v()[s[e]]; p && p.push([f, e, r, a]); return a }, get: h, listeners: m, context: g, buffer: function (e, t) { const r = v(); if (t = t || "feature", f.aborted) return; Object.entries(e || {}).forEach((([e, n]) => { s[n] = t, t in r || (r[t] = []) })) }, abort: function () { f._aborted = !0, Object.keys(f.backlog).forEach((e => { delete f.backlog[e] })) }, isBuffering: function (e) { return !!v()[s[e]] }, debugId: r, backlog: d ? {} : t && "object" == typeof t.backlog ? t.backlog : {}, isolatedBacklog: d }; return Object.defineProperty(f, "aborted", { get: () => { let e = f._aborted || !1; return e || (t && (e = t.aborted), e) } }), f; function g(e) { return e && e instanceof a.y ? e : e ? (0, i.I)(e, c, (() => new a.y(c))) : new a.y(c) } function p(e, t) { n[e] = m(e).concat(t) } function m(e) { return n[e] || [] } function h(t) { return l[t] = l[t] || e(f, t) } function v() { return f.backlog } }(void 0, "globalEE"), l = (0, n.Zm)(); l.ee || (l.ee = u) }, 646: (e, t, r) => { "use strict"; r.d(t, { y: () => n }); class n { constructor(e) { this.contextId = e } } }, 908: (e, t, r) => { "use strict"; r.d(t, { d: () => n, p: () => i }); var n = r(836).ee.get("handle"); function i(e, t, r, i, o) { o ? (o.buffer([e], i), o.emit(e, t, r)) : (n.buffer([e], i), n.emit(e, t, r)) } }, 606: (e, t, r) => { "use strict"; r.d(t, { i: () => o }); var n = r(908); o.on = a; var i = o.handlers = {}; function o(e, t, r, o) { a(o || n.d, i, e, t, r) } function a(e, t, r, i, o) { o || (o = "feature"), e || (e = n.d); var a = t[o] = t[o] || {}; (a[r] = a[r] || []).push([e, i]) } }, 878: (e, t, r) => { "use strict"; function n(e, t) { return { capture: e, passive: !1, signal: t } } function i(e, t, r = !1, i) { window.addEventListener(e, t, n(r, i)) } function o(e, t, r = !1, i) { document.addEventListener(e, t, n(r, i)) } r.d(t, { DD: () => o, jT: () => n, sp: () => i }) }, 607: (e, t, r) => { "use strict"; r.d(t, { W: () => n }); const n = (0, r(566).bz)() }, 566: (e, t, r) => { "use strict"; r.d(t, { LA: () => s, bz: () => a }); var n = r(154); const i = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx"; function o(e, t) { return e ? 15 & e[t] : 16 * Math.random() | 0 } function a() { const e = n.gm?.crypto || n.gm?.msCrypto; let t, r = 0; return e && e.getRandomValues && (t = e.getRandomValues(new Uint8Array(30))), i.split("").map((e => "x" === e ? o(t, r++).toString(16) : "y" === e ? (3 & o() | 8).toString(16) : e)).join("") } function s(e) { const t = n.gm?.crypto || n.gm?.msCrypto; let r, i = 0; t && t.getRandomValues && (r = t.getRandomValues(new Uint8Array(e))); const a = []; for (var s = 0; s < e; s++)a.push(o(r, i++).toString(16)); return a.join("") } }, 614: (e, t, r) => { "use strict"; r.d(t, { BB: () => a, H3: () => n, g: () => u, iL: () => c, tS: () => s, uh: () => i, wk: () => o }); const n = "NRBA", i = "SESSION", o = 144e5, a = 18e5, s = { STARTED: "session-started", PAUSE: "session-pause", RESET: "session-reset", RESUME: "session-resume", UPDATE: "session-update" }, c = { SAME_TAB: "same-tab", CROSS_TAB: "cross-tab" }, u = { OFF: 0, FULL: 1, ERROR: 2 } }, 863: (e, t, r) => { "use strict"; function n() { return Math.floor(performance.now()) } r.d(t, { t: () => n }) }, 944: (e, t, r) => { "use strict"; function n(e, t) { "function" == typeof console.debug && console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e), t) } r.d(t, { R: () => n }) }, 284: (e, t, r) => { "use strict"; r.d(t, { t: () => c, B: () => s }); var n = r(836), i = r(154); const o = "newrelic"; const a = new Set, s = {}; function c(e, t) { const r = n.ee.get(t); s[t] ??= {}, e && "object" == typeof e && (a.has(t) || (r.emit("rumresp", [e]), s[t] = e, a.add(t), function (e = {}) { try { i.gm.dispatchEvent(new CustomEvent(o, { detail: e })) } catch (e) { } }({ loaded: !0 }))) } }, 990: (e, t, r) => { "use strict"; r.d(t, { I: () => i }); var n = Object.prototype.hasOwnProperty; function i(e, t, r) { if (n.call(e, t)) return e[t]; var i = r(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, t, { value: i, writable: !0, enumerable: !1 }), i } catch (e) { } return e[t] = i, i } }, 389: (e, t, r) => { "use strict"; function n(e, t = 500, r = {}) { const n = r?.leading || !1; let i; return (...r) => { n && void 0 === i && (e.apply(this, r), i = setTimeout((() => { i = clearTimeout(i) }), t)), n || (clearTimeout(i), i = setTimeout((() => { e.apply(this, r) }), t)) } } function i(e) { let t = !1; return (...r) => { t || (t = !0, e.apply(this, r)) } } r.d(t, { J: () => i, s: () => n }) }, 289: (e, t, r) => { "use strict"; r.d(t, { GG: () => o, sB: () => a }); var n = r(878); function i() { return "undefined" == typeof document || "complete" === document.readyState } function o(e, t) { if (i()) return e(); (0, n.sp)("load", e, t) } function a(e) { if (i()) return e(); (0, n.DD)("DOMContentLoaded", e) } }, 384: (e, t, r) => { "use strict"; r.d(t, { NT: () => o, US: () => l, Zm: () => a, bQ: () => c, dV: () => s, nY: () => u, pV: () => d }); var n = r(154), i = r(863); const o = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net" }; function a() { return n.gm.NREUM || (n.gm.NREUM = {}), void 0 === n.gm.newrelic && (n.gm.newrelic = n.gm.NREUM), n.gm.NREUM } function s() { let e = a(); return e.o || (e.o = { ST: n.gm.setTimeout, SI: n.gm.setImmediate, CT: n.gm.clearTimeout, XHR: n.gm.XMLHttpRequest, REQ: n.gm.Request, EV: n.gm.Event, PR: n.gm.Promise, MO: n.gm.MutationObserver, FETCH: n.gm.fetch, WS: n.gm.WebSocket }), e } function c(e, t) { let r = a(); r.initializedAgents ??= {}, t.initializedAt = { ms: (0, i.t)(), date: new Date }, r.initializedAgents[e] = t } function u(e) { let t = a(); return t.initializedAgents?.[e] } function l(e, t) { a()[e] = t } function d() { return function () { let e = a(); const t = e.info || {}; e.info = { beacon: o.beacon, errorBeacon: o.errorBeacon, ...t } }(), function () { let e = a(); const t = e.init || {}; e.init = { ...t } }(), s(), function () { let e = a(); const t = e.loader_config || {}; e.loader_config = { ...t } }(), a() } }, 843: (e, t, r) => { "use strict"; r.d(t, { u: () => i }); var n = r(878); function i(e, t = !1, r, i) { (0, n.DD)("visibilitychange", (function () { if (t) return void ("hidden" === document.visibilityState && e()); e(document.visibilityState) }), r, i) } }, 434: (e, t, r) => { "use strict"; r.d(t, { Jt: () => o, YM: () => c }); var n = r(836), i = r(607); const o = "nr@original:".concat(i.W); var a = Object.prototype.hasOwnProperty, s = !1; function c(e, t) { return e || (e = n.ee), r.inPlace = function (e, t, n, i, o) { n || (n = ""); const a = "-" === n.charAt(0); for (let s = 0; s < t.length; s++) { const c = t[s], u = e[c]; l(u) || (e[c] = r(u, a ? c + n : n, i, c, o)) } }, r.flag = o, r; function r(t, r, n, s, c) { return l(t) ? t : (r || (r = ""), nrWrapper[o] = t, function (e, t, r) { if (Object.defineProperty && Object.keys) try { return Object.keys(e).forEach((function (r) { Object.defineProperty(t, r, { get: function () { return e[r] }, set: function (t) { return e[r] = t, t } }) })), t } catch (e) { u([e], r) } for (var n in e) a.call(e, n) && (t[n] = e[n]) }(t, nrWrapper, e), nrWrapper); function nrWrapper() { var o, a, l, d; try { a = this, o = [...arguments], l = "function" == typeof n ? n(o, a) : n || {} } catch (t) { u([t, "", [o, a, s], l], e) } i(r + "start", [o, a, s], l, c); try { return d = t.apply(a, o) } catch (e) { throw i(r + "err", [o, a, e], l, c), e } finally { i(r + "end", [o, a, d], l, c) } } } function i(r, n, i, o) { if (!s || t) { var a = s; s = !0; try { e.emit(r, n, i, t, o) } catch (t) { u([t, r, n, i], e) } s = a } } } function u(e, t) { t || (t = n.ee); try { t.emit("internal-error", e) } catch (e) { } } function l(e) { return !(e && "function" == typeof e && e.apply && !e[o]) } }, 993: (e, t, r) => { "use strict"; r.d(t, { A$: () => o, ET: () => a, p_: () => i }); var n = r(860); const i = { ERROR: "ERROR", WARN: "WARN", INFO: "INFO", DEBUG: "DEBUG", TRACE: "TRACE" }, o = { OFF: 0, ERROR: 1, WARN: 2, INFO: 3, DEBUG: 4, TRACE: 5 }, a = "log"; n.K7.logging }, 773: (e, t, r) => { "use strict"; r.d(t, { z_: () => o, XG: () => s, TZ: () => n, rs: () => i, xV: () => a }); r(154), r(566), r(384); const n = r(860).K7.metrics, i = "sm", o = "cm", a = "storeSupportabilityMetrics", s = "storeEventMetrics" }, 630: (e, t, r) => { "use strict"; r.d(t, { T: () => n }); const n = r(860).K7.pageViewEvent }, 782: (e, t, r) => { "use strict"; r.d(t, { T: () => n }); const n = r(860).K7.pageViewTiming }, 344: (e, t, r) => { "use strict"; r.d(t, { G4: () => i }); var n = r(614); r(860).K7.sessionReplay; const i = { RECORD: "recordReplay", PAUSE: "pauseReplay", REPLAY_RUNNING: "replayRunning", ERROR_DURING_REPLAY: "errorDuringReplay" }; n.g.ERROR, n.g.FULL, n.g.OFF }, 234: (e, t, r) => { "use strict"; r.d(t, { W: () => o }); var n = r(836), i = r(687); class o { constructor(e, t) { this.agentIdentifier = e, this.ee = n.ee.get(e), this.featureName = t, this.blocked = !1 } deregisterDrain() { (0, i.x3)(this.agentIdentifier, this.featureName) } } }, 603: (e, t, r) => { "use strict"; r.d(t, { j: () => K }); var n = r(860), i = r(555), o = r(371), a = r(908), s = r(836), c = r(687), u = r(289), l = r(154), d = r(944), f = r(773), g = r(384), p = r(344); const m = ["setErrorHandler", "finished", "addToTrace", "addRelease", "recordCustomEvent", "addPageAction", "setCurrentRouteName", "setPageViewName", "setCustomAttribute", "interaction", "noticeError", "setUserId", "setApplicationVersion", "start", p.G4.RECORD, p.G4.PAUSE, "log", "wrapLogger"], h = ["setErrorHandler", "finished", "addToTrace", "addRelease"]; var v = r(863), b = r(614), y = r(993); var w = r(646), R = r(434); const A = new Map; function E(e, t, r, n) { if ("object" != typeof t || !t || "string" != typeof r || !r || "function" != typeof t[r]) return (0, d.R)(29); const i = function (e) { return (e || s.ee).get("logger") }(e), o = (0, R.YM)(i), a = new w.y(s.P); a.level = n.level, a.customAttributes = n.customAttributes; const c = t[r]?.[R.Jt] || t[r]; return A.set(c, a), o.inPlace(t, [r], "wrap-logger-", (() => A.get(c))), i } function _() { const e = (0, g.pV)(); m.forEach((t => { e[t] = (...r) => function (t, ...r) { let n = []; return Object.values(e.initializedAgents).forEach((e => { e && e.api ? e.exposed && e.api[t] && n.push(e.api[t](...r)) : (0, d.R)(38, t) })), n.length > 1 ? n : n[0] }(t, ...r) })) } const x = {}; function N(e, t, g = !1) { t || (0, c.Ak)(e, "api"); const m = {}; var w = s.ee.get(e), R = w.get("tracer"); x[e] = b.g.OFF, w.on(p.G4.REPLAY_RUNNING, (t => { x[e] = t })); var A = "api-", _ = A + "ixn-"; function N(t, r, n, o) { const a = (0, i.Vp)(e); return null === r ? delete a.jsAttributes[t] : (0, i.x1)(e, { ...a, jsAttributes: { ...a.jsAttributes, [t]: r } }), j(A, n, !0, o || null === r ? "session" : void 0)(t, r) } function k() { } m.log = function (e, { customAttributes: t = {}, level: r = y.p_.INFO } = {}) { (0, a.p)(f.xV, ["API/log/called"], void 0, n.K7.metrics, w), function (e, t, r = {}, i = y.p_.INFO) { (0, a.p)(f.xV, ["API/logging/".concat(i.toLowerCase(), "/called")], void 0, n.K7.metrics, e), (0, a.p)(y.ET, [(0, v.t)(), t, r, i], void 0, n.K7.logging, e) }(w, e, t, r) }, m.wrapLogger = (e, t, { customAttributes: r = {}, level: i = y.p_.INFO } = {}) => { (0, a.p)(f.xV, ["API/wrapLogger/called"], void 0, n.K7.metrics, w), E(w, e, t, { customAttributes: r, level: i }) }, h.forEach((e => { m[e] = j(A, e, !0, "api") })), m.addPageAction = j(A, "addPageAction", !0, n.K7.genericEvents), m.recordCustomEvent = j(A, "recordCustomEvent", !0, n.K7.genericEvents), m.setPageViewName = function (t, r) { if ("string" == typeof t) return "/" !== t.charAt(0) && (t = "/" + t), (0, o.f)(e).customTransaction = (r || "http://custom.transaction") + t, j(A, "setPageViewName", !0)() }, m.setCustomAttribute = function (e, t, r = !1) { if ("string" == typeof e) { if (["string", "number", "boolean"].includes(typeof t) || null === t) return N(e, t, "setCustomAttribute", r); (0, d.R)(40, typeof t) } else (0, d.R)(39, typeof e) }, m.setUserId = function (e) { if ("string" == typeof e || null === e) return N("enduser.id", e, "setUserId", !0); (0, d.R)(41, typeof e) }, m.setApplicationVersion = function (e) { if ("string" == typeof e || null === e) return N("application.version", e, "setApplicationVersion", !1); (0, d.R)(42, typeof e) }, m.start = () => { try { (0, a.p)(f.xV, ["API/start/called"], void 0, n.K7.metrics, w), w.emit("manual-start-all") } catch (e) { (0, d.R)(23, e) } }, m[p.G4.RECORD] = function () { (0, a.p)(f.xV, ["API/recordReplay/called"], void 0, n.K7.metrics, w), (0, a.p)(p.G4.RECORD, [], void 0, n.K7.sessionReplay, w) }, m[p.G4.PAUSE] = function () { (0, a.p)(f.xV, ["API/pauseReplay/called"], void 0, n.K7.metrics, w), (0, a.p)(p.G4.PAUSE, [], void 0, n.K7.sessionReplay, w) }, m.interaction = function (e) { return (new k).get("object" == typeof e ? e : {}) }; const T = k.prototype = { createTracer: function (e, t) { var r = {}, i = this, o = "function" == typeof t; return (0, a.p)(f.xV, ["API/createTracer/called"], void 0, n.K7.metrics, w), g || (0, a.p)(_ + "tracer", [(0, v.t)(), e, r], i, n.K7.spa, w), function () { if (R.emit((o ? "" : "no-") + "fn-start", [(0, v.t)(), i, o], r), o) try { return t.apply(this, arguments) } catch (e) { const t = "string" == typeof e ? new Error(e) : e; throw R.emit("fn-err", [arguments, this, t], r), t } finally { R.emit("fn-end", [(0, v.t)()], r) } } } }; function j(e, t, r, i) { return function () { return (0, a.p)(f.xV, ["API/" + t + "/called"], void 0, n.K7.metrics, w), i && (0, a.p)(e + t, [r ? (0, v.t)() : performance.now(), ...arguments], r ? null : this, i, w), r ? void 0 : this } } function I() { r.e(296).then(r.bind(r, 778)).then((({ setAPI: t }) => { t(e), (0, c.Ze)(e, "api") })).catch((e => { (0, d.R)(27, e), w.abort() })) } return ["actionText", "setName", "setAttribute", "save", "ignore", "onEnd", "getContext", "end", "get"].forEach((e => { T[e] = j(_, e, void 0, g ? n.K7.softNav : n.K7.spa) })), m.setCurrentRouteName = g ? j(_, "routeName", void 0, n.K7.softNav) : j(A, "routeName", !0, n.K7.spa), m.noticeError = function (t, r) { "string" == typeof t && (t = new Error(t)), (0, a.p)(f.xV, ["API/noticeError/called"], void 0, n.K7.metrics, w), (0, a.p)("err", [t, (0, v.t)(), !1, r, !!x[e]], void 0, n.K7.jserrors, w) }, l.RI ? (0, u.GG)((() => I()), !0) : I(), m } var k = r(217), T = r(122); const j = { accountID: void 0, trustKey: void 0, agentID: void 0, licenseKey: void 0, applicationID: void 0, xpid: void 0 }, I = {}; var O = r(284); const S = e => { const t = e.startsWith("http"); e += "/", r.p = t ? e : "https://" + e }; let P = !1; function K(e, t = {}, r, n) { let { init: a, info: c, loader_config: u, runtime: d = {}, exposed: f = !0 } = t; d.loaderType = r; const p = (0, g.pV)(); c || (a = p.init, c = p.info, u = p.loader_config), (0, k.xN)(e.agentIdentifier, a || {}), function (e, t) { if (!e) throw new Error("All loader-config objects require an agent identifier!"); I[e] = (0, T.a)(t, j); const r = (0, g.nY)(e); r && (r.loader_config = I[e]) }(e.agentIdentifier, u || {}), c.jsAttributes ??= {}, l.bv && (c.jsAttributes.isWorker = !0), (0, i.x1)(e.agentIdentifier, c); const m = (0, k.D0)(e.agentIdentifier), h = [c.beacon, c.errorBeacon]; P || (m.proxy.assets && (S(m.proxy.assets), h.push(m.proxy.assets)), m.proxy.beacon && h.push(m.proxy.beacon), _(), (0, g.US)("activatedFeatures", O.B), e.runSoftNavOverSpa &&= !0 === m.soft_navigations.enabled && m.feature_flags.includes("soft_nav")), d.denyList = [...m.ajax.deny_list || [], ...m.ajax.block_internal ? h : []], d.ptid = e.agentIdentifier, (0, o.V)(e.agentIdentifier, d), e.ee = s.ee.get(e.agentIdentifier), void 0 === e.api && (e.api = N(e.agentIdentifier, n, e.runSoftNavOverSpa)), void 0 === e.exposed && (e.exposed = f), P = !0 } }, 374: (e, t, r) => { r.nc = (() => { try { return document?.currentScript?.nonce } catch (e) { } return "" })() }, 860: (e, t, r) => { "use strict"; r.d(t, { $J: () => u, K7: () => s, P3: () => c, XX: () => i, qY: () => n, v4: () => a }); const n = "events", i = "jserrors", o = "browser/blobs", a = "rum", s = { ajax: "ajax", genericEvents: "generic_events", jserrors: i, logging: "logging", metrics: "metrics", pageAction: "page_action", pageViewEvent: "page_view_event", pageViewTiming: "page_view_timing", sessionReplay: "session_replay", sessionTrace: "session_trace", softNav: "soft_navigations", spa: "spa" }, c = { [s.pageViewEvent]: 1, [s.pageViewTiming]: 2, [s.metrics]: 3, [s.jserrors]: 4, [s.spa]: 5, [s.ajax]: 6, [s.sessionTrace]: 7, [s.softNav]: 8, [s.sessionReplay]: 9, [s.logging]: 10, [s.genericEvents]: 11 }, u = { [s.pageViewEvent]: a, [s.pageViewTiming]: n, [s.ajax]: n, [s.spa]: n, [s.softNav]: n, [s.metrics]: i, [s.jserrors]: i, [s.sessionTrace]: o, [s.sessionReplay]: o, [s.logging]: "browser/logs", [s.genericEvents]: "ins" } } }, n = {}; function i(e) { var t = n[e]; if (void 0 !== t) return t.exports; var o = n[e] = { exports: {} }; return r[e](o, o.exports, i), o.exports } i.m = r, i.d = (e, t) => { for (var r in t) i.o(t, r) && !i.o(e, r) && Object.defineProperty(e, r, { enumerable: !0, get: t[r] }) }, i.f = {}, i.e = e => Promise.all(Object.keys(i.f).reduce(((t, r) => (i.f[r](e, t), t)), [])), i.u = e => "nr-rum-1.283.2.min.js", i.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t), e = {}, t = "NRBA-1.283.2.PROD:", i.l = (r, n, o, a) => { if (e[r]) e[r].push(n); else { var s, c; if (void 0 !== o) for (var u = document.getElementsByTagName("script"), l = 0; l < u.length; l++) { var d = u[l]; if (d.getAttribute("src") == r || d.getAttribute("data-webpack") == t + o) { s = d; break } } if (!s) { c = !0; var f = { 296: "sha512-2Y8GMAOGF658KnXzOZ/v+DlLch8TBFvV0tTNnOy9wrpvtDa1t5CdZMyX+LubTymBlzPp6NUjllBghMCZqXBPmg==" }; (s = document.createElement("script")).charset = "utf-8", s.timeout = 120, i.nc && s.setAttribute("nonce", i.nc), s.setAttribute("data-webpack", t + o), s.src = r, 0 !== s.src.indexOf(window.location.origin + "/") && (s.crossOrigin = "anonymous"), f[a] && (s.integrity = f[a]) } e[r] = [n]; var g = (t, n) => { s.onerror = s.onload = null, clearTimeout(p); var i = e[r]; if (delete e[r], s.parentNode && s.parentNode.removeChild(s), i && i.forEach((e => e(n))), t) return t(n) }, p = setTimeout(g.bind(null, void 0, { type: "timeout", target: s }), 12e4); s.onerror = g.bind(null, s.onerror), s.onload = g.bind(null, s.onload), c && document.head.appendChild(s) } }, i.r = e => { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, i.p = "https://js-agent.newrelic.com/", (() => { var e = { 374: 0, 840: 0 }; i.f.j = (t, r) => { var n = i.o(e, t) ? e[t] : void 0; if (0 !== n) if (n) r.push(n[2]); else { var o = new Promise(((r, i) => n = e[t] = [r, i])); r.push(n[2] = o); var a = i.p + i.u(t), s = new Error; i.l(a, (r => { if (i.o(e, t) && (0 !== (n = e[t]) && (e[t] = void 0), n)) { var o = r && ("load" === r.type ? "missing" : r.type), a = r && r.target && r.target.src; s.message = "Loading chunk " + t + " failed.\n(" + o + ": " + a + ")", s.name = "ChunkLoadError", s.type = o, s.request = a, n[1](s) } }), "chunk-" + t, t) } }; var t = (t, r) => { var n, o, [a, s, c] = r, u = 0; if (a.some((t => 0 !== e[t]))) { for (n in s) i.o(s, n) && (i.m[n] = s[n]); if (c) c(i) } for (t && t(r); u < a.length; u++)o = a[u], i.o(e, o) && e[o] && e[o][0](), e[o] = 0 }, r = self["webpackChunk:NRBA-1.283.2.PROD"] = self["webpackChunk:NRBA-1.283.2.PROD"] || []; r.forEach(t.bind(null, 0)), r.push = t.bind(null, r.push.bind(r)) })(), (() => { "use strict"; i(374); var e = i(944), t = i(344), r = i(566); class n { agentIdentifier; constructor() { this.agentIdentifier = (0, r.LA)(16) } #e(t, ...r) { if ("function" == typeof this.api?.[t]) return this.api[t](...r); (0, e.R)(35, t) } addPageAction(e, t) { return this.#e("addPageAction", e, t) } recordCustomEvent(e, t) { return this.#e("recordCustomEvent", e, t) } setPageViewName(e, t) { return this.#e("setPageViewName", e, t) } setCustomAttribute(e, t, r) { return this.#e("setCustomAttribute", e, t, r) } noticeError(e, t) { return this.#e("noticeError", e, t) } setUserId(e) { return this.#e("setUserId", e) } setApplicationVersion(e) { return this.#e("setApplicationVersion", e) } setErrorHandler(e) { return this.#e("setErrorHandler", e) } addRelease(e, t) { return this.#e("addRelease", e, t) } log(e, t) { return this.#e("log", e, t) } } class o extends n { #e(t, ...r) { if ("function" == typeof this.api?.[t]) return this.api[t](...r); (0, e.R)(35, t) } start() { return this.#e("start") } finished(e) { return this.#e("finished", e) } recordReplay() { return this.#e(t.G4.RECORD) } pauseReplay() { return this.#e(t.G4.PAUSE) } addToTrace(e) { return this.#e("addToTrace", e) } setCurrentRouteName(e) { return this.#e("setCurrentRouteName", e) } interaction() { return this.#e("interaction") } wrapLogger(e, t, r) { return this.#e("wrapLogger", e, t, r) } } var a = i(860), s = i(217); const c = Object.values(a.K7); function u(e) { const t = {}; return c.forEach((r => { t[r] = function (e, t) { return !0 === (0, s.gD)(t, "".concat(e, ".enabled")) }(r, e) })), t } var l = i(603); var d = i(687), f = i(234), g = i(289), p = i(154), m = i(384); const h = e => p.RI && !0 === (0, s.gD)(e, "privacy.cookies_enabled"); function v(e) { return !!(0, m.dV)().o.MO && h(e) && !0 === (0, s.gD)(e, "session_trace.enabled") } var b = i(389); class y extends f.W { constructor(e, t, r = !0) { super(e.agentIdentifier, t), this.auto = r, this.abortHandler = void 0, this.featAggregate = void 0, this.onAggregateImported = void 0, !1 === e.init[this.featureName].autoStart && (this.auto = !1), this.auto ? (0, d.Ak)(e.agentIdentifier, t) : this.ee.on("manual-start-all", (0, b.J)((() => { (0, d.Ak)(e.agentIdentifier, this.featureName), this.auto = !0, this.importAggregator(e) }))) } importAggregator(t, r = {}) { if (this.featAggregate || !this.auto) return; let n; this.onAggregateImported = new Promise((e => { n = e })); const o = async () => { let o; try { if (h(this.agentIdentifier)) { const { setupAgentSession: e } = await i.e(296).then(i.bind(i, 861)); o = e(t) } } catch (t) { (0, e.R)(20, t), this.ee.emit("internal-error", [t]), this.featureName === a.K7.sessionReplay && this.abortHandler?.() } try { if (!this.#t(this.featureName, o)) return (0, d.Ze)(this.agentIdentifier, this.featureName), void n(!1); const { lazyFeatureLoader: e } = await i.e(296).then(i.bind(i, 103)), { Aggregate: a } = await e(this.featureName, "aggregate"); this.featAggregate = new a(t, r), t.runtime.harvester.initializedAggregates.push(this.featAggregate), n(!0) } catch (t) { (0, e.R)(34, t), this.abortHandler?.(), (0, d.Ze)(this.agentIdentifier, this.featureName, !0), n(!1), this.ee && this.ee.abort() } }; p.RI ? (0, g.GG)((() => o()), !0) : o() } #t(e, t) { switch (e) { case a.K7.sessionReplay: return v(this.agentIdentifier) && !!t; case a.K7.sessionTrace: return !!t; default: return !0 } } } var w = i(630); class R extends y { static featureName = w.T; constructor(e, t = !0) { super(e, w.T, t), this.importAggregator(e) } } var A = i(908), E = i(843), _ = i(878), x = i(782), N = i(863); class k extends y { static featureName = x.T; constructor(e, t = !0) { super(e, x.T, t), p.RI && ((0, E.u)((() => (0, A.p)("docHidden", [(0, N.t)()], void 0, x.T, this.ee)), !0), (0, _.sp)("pagehide", (() => (0, A.p)("winPagehide", [(0, N.t)()], void 0, x.T, this.ee))), this.importAggregator(e)) } } var T = i(773); class j extends y { static featureName = T.TZ; constructor(e, t = !0) { super(e, T.TZ, t), this.importAggregator(e) } } new class extends o { constructor(t) { super(), p.gm ? (this.features = {}, (0, m.bQ)(this.agentIdentifier, this), this.desiredFeatures = new Set(t.features || []), this.desiredFeatures.add(R), this.runSoftNavOverSpa = [...this.desiredFeatures].some((e => e.featureName === a.K7.softNav)), (0, l.j)(this, t, t.loaderType || "agent"), this.run()) : (0, e.R)(21) } get config() { return { info: this.info, init: this.init, loader_config: this.loader_config, runtime: this.runtime } } run() { try { const t = u(this.agentIdentifier), r = [...this.desiredFeatures]; r.sort(((e, t) => a.P3[e.featureName] - a.P3[t.featureName])), r.forEach((r => { if (!t[r.featureName] && r.featureName !== a.K7.pageViewEvent) return; if (this.runSoftNavOverSpa && r.featureName === a.K7.spa) return; if (!this.runSoftNavOverSpa && r.featureName === a.K7.softNav) return; const n = function (e) { switch (e) { case a.K7.ajax: return [a.K7.jserrors]; case a.K7.sessionTrace: return [a.K7.ajax, a.K7.pageViewEvent]; case a.K7.sessionReplay: return [a.K7.sessionTrace]; case a.K7.pageViewTiming: return [a.K7.pageViewEvent]; default: return [] } }(r.featureName).filter((e => !(e in this.features))); n.length > 0 && (0, e.R)(36, { targetFeature: r.featureName, missingDependencies: n }), this.features[r.featureName] = new r(this) })) } catch (t) { (0, e.R)(22, t); for (const e in this.features) this.features[e].abortHandler?.(); const r = (0, m.Zm)(); delete r.initializedAgents[this.agentIdentifier]?.api, delete r.initializedAgents[this.agentIdentifier]?.features, delete this.sharedAggregator; return r.ee.get(this.agentIdentifier).abort(), !1 } } }({ features: [R, k, j], loaderType: "lite" }) })() })();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <link media="all" href="autoptimize/css/autoptimize_f447c4de84c3bd9ab48ff6de30a0ff05.css" rel="stylesheet">
+  <link media="screen" href="autoptimize/css/autoptimize_3ec46b8665f4b1b52526c79b01d4f206.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+  <title>Thomas&#039; story | Children with Cancer UK</title>
+  <link rel="icon" type="img/png"
+    href="https://www.childrenwithcancer.org.uk/wp-content/uploads/2024/04/Children-with-Cancer-UK-logo-144-x-144-PNG.png">
+  <link rel="pingback" href="https://www.childrenwithcancer.org.uk/xmlrpc.php">
+  <meta name="format-detection" content="telephone=no">
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+  <meta name="description"
+    content="Thomas was diagnosed with acute lymphoblastic leukaemia when he was just two years old. Read his cancer story here." />
+  <link rel="canonical" href="index.html" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Thomas&#039; story | Children with Cancer UK" />
+  <meta property="og:description"
+    content="Thomas was diagnosed with acute lymphoblastic leukaemia when he was just two years old. Read his cancer story here." />
+  <meta property="og:url" content="https://www.childrenwithcancer.org.uk/stories/patient-story-thomas-d/" />
+  <meta property="og:site_name" content="Children with Cancer" />
+  <meta property="article:publisher" content="https://www.facebook.com/childrenwithcanceruk/" />
+  <meta property="article:modified_time" content="2025-03-04T10:32:39+00:00" />
+  <meta property="og:image"
+    content="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/11/Thomas-in-toy-story-t-shirt-scaled.jpg" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="2560" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@CWC_UK" />
+  <meta name="twitter:label1" content="Estimated reading time" />
+  <meta name="twitter:data1" content="5 minutes" />
+  <script type="application/ld+json"
+    class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.childrenwithcancer.org.uk/stories/patient-story-thomas-d/","url":"https://www.childrenwithcancer.org.uk/stories/patient-story-thomas-d/","name":"Thomas' story | Children with Cancer UK","isPartOf":{"@id":"https://www.childrenwithcancer.org.uk/#website"},"primaryImageOfPage":{"@id":"https://www.childrenwithcancer.org.uk/stories/patient-story-thomas-d/#primaryimage"},"image":{"@id":"https://www.childrenwithcancer.org.uk/stories/patient-story-thomas-d/#primaryimage"},"thumbnailUrl":"https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/11/Thomas-in-toy-story-t-shirt-scaled.jpg","datePublished":"2023-11-29T10:49:34+00:00","dateModified":"2025-03-04T10:32:39+00:00","description":"Thomas was diagnosed with acute lymphoblastic leukaemia when he was just two years old. Read his cancer story here.","breadcrumb":{"@id":"https://www.childrenwithcancer.org.uk/stories/patient-story-thomas-d/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://www.childrenwithcancer.org.uk/stories/patient-story-thomas-d/"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.childrenwithcancer.org.uk/stories/patient-story-thomas-d/#primaryimage","url":"https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/11/Thomas-in-toy-story-t-shirt-scaled.jpg","contentUrl":"https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/11/Thomas-in-toy-story-t-shirt-scaled.jpg","width":1920,"height":2560,"caption":"Thomas in toy story t shirt"},{"@type":"BreadcrumbList","@id":"https://www.childrenwithcancer.org.uk/stories/patient-story-thomas-d/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.childrenwithcancer.org.uk/"},{"@type":"ListItem","position":2,"name":"Stories","item":"https://www.childrenwithcancer.org.uk/stories/"},{"@type":"ListItem","position":3,"name":"Patient Story – Thomas D"}]},{"@type":"WebSite","@id":"https://www.childrenwithcancer.org.uk/#website","url":"https://www.childrenwithcancer.org.uk/","name":"Children with Cancer","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.childrenwithcancer.org.uk/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"}]}</script>
+  <script type='application/javascript'>console.log('PixelYourSite PRO version 9.6.2');</script>
+  <link rel='dns-prefetch' href='https://code.jquery.com/' />
+  <link href='https://www.google.com' rel='preconnect' />
+  <link href='https://www.gstatic.com' rel='preconnect' />
+  <link href='https://connect.facebook.net' rel='preconnect' />
+  <link href='https://www.google-analytics.com' rel='preconnect' />
+  <link href='https://www.googletagmanager.com' rel='preconnect' />
+  <link href='https://consentcdn.cookiebot.com' rel='preconnect' />
+  <link rel="alternate" type="application/rss+xml" title="Children with Cancer &raquo; Feed"
+    href="https://www.childrenwithcancer.org.uk/feed/" />
+  <link rel="alternate" type="application/rss+xml" title="Children with Cancer &raquo; Comments Feed"
+    href="https://www.childrenwithcancer.org.uk/comments/feed/" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js?ver=6.7.1" id="jquery-js"></script>
+  <script type="text/javascript"
+    id="dotdigital_for_wordpress_public_js-js-extra">var dotdigital_form_data = { "ajax_url": "https:\/\/www.childrenwithcancer.org.uk\/wp-json\/", "nonce": "770cc688fa", "generic_failure_message": "There was a problem signing you up." };</script>
+  <script type="text/javascript" src="autoptimize/js/autoptimize_single_4924335072230e7b6093325b4370ccc6.js@ver=7.2.4"
+    id="dotdigital_for_wordpress_public_js-js"></script>
+  <script type="text/javascript" src="pixelyoursite-pro/dist/scripts/js.cookie-2.1.3.min.js@ver=2.1.3"
+    id="js-cookie-pys-js"></script>
+  <script type="text/javascript" src="pixelyoursite-pro/dist/scripts/jquery.bind-first-0.2.3.min.js@ver=6.7.1"
+    id="jquery-bind-first-js"></script>
+  <script type="text/javascript"
+    id="pys-js-extra">var pysOptions = { "staticEvents": { "facebook": { "init_event": [{ "delay": 0, "type": "static", "name": "PageView", "eventID": "67423af8-aa7f-44b3-9441-7c8624c280e7", "pixelIds": ["175888146172513"], "params": { "post_id": 42666, "plugin": "PixelYourSite", "user_role": "guest" }, "e_id": "init_event", "ids": [], "hasTimeWindow": false, "timeWindow": 0, "woo_order": "", "edd_order": "" }] } }, "dynamicEvents": [], "triggerEvents": [], "triggerEventTypes": [], "facebook": { "pixelIds": ["175888146172513"], "advancedMatchingEnabled": false, "advancedMatching": [], "removeMetadata": false, "wooVariableAsSimple": false, "serverApiEnabled": true, "ajaxForServerEvent": true, "wooCRSendFromServer": false, "send_external_id": true }, "debug": "1", "siteUrl": "https:\/\/www.childrenwithcancer.org.uk", "ajaxUrl": "https:\/\/www.childrenwithcancer.org.uk\/wp-admin\/admin-ajax.php", "ajax_event": "32c0102753", "trackUTMs": "1", "trackTrafficSource": "1", "user_id": "0", "enable_lading_page_param": "", "cookie_duration": "7", "enable_event_day_param": "1", "enable_event_month_param": "1", "enable_event_time_param": "1", "enable_remove_target_url_param": "1", "enable_remove_download_url_param": "1", "visit_data_model": "first_visit", "last_visit_duration": "60", "enable_auto_save_advance_matching": "1", "advance_matching_fn_names": ["", "first_name", "first-name", "first name", "name"], "advance_matching_ln_names": ["", "last_name", "last-name", "last name"], "advance_matching_tel_names": ["", "phone", "tel"], "enable_success_send_form": "", "enable_automatic_events": "", "enable_event_video": "1", "gdpr": { "ajax_enabled": false, "all_disabled_by_api": false, "facebook_disabled_by_api": false, "tiktok_disabled_by_api": false, "analytics_disabled_by_api": false, "google_ads_disabled_by_api": false, "pinterest_disabled_by_api": false, "bing_disabled_by_api": false, "facebook_prior_consent_enabled": true, "tiktok_prior_consent_enabled": true, "analytics_prior_consent_enabled": true, "google_ads_prior_consent_enabled": true, "pinterest_prior_consent_enabled": true, "bing_prior_consent_enabled": true, "cookiebot_integration_enabled": false, "cookiebot_facebook_consent_category": "marketing", "cookiebot_analytics_consent_category": "statistics", "cookiebot_google_ads_consent_category": "marketing", "cookiebot_pinterest_consent_category": "marketing", "cookiebot_bing_consent_category": "marketing", "cookie_notice_integration_enabled": false, "cookie_law_info_integration_enabled": false, "real_cookie_banner_integration_enabled": false, "consent_magic_integration_enabled": false }, "automatic": { "enable_youtube": true, "enable_vimeo": true, "enable_video": true }, "woo": { "enabled": false }, "edd": { "enabled": false } };</script>
+  <script type="text/javascript" src="autoptimize/js/autoptimize_single_bb77b8d55bd144532dfdf18cab6268ef.js@ver=9.6.2"
+    id="pys-js"></script>
+  <script type="text/javascript"
+    id="afp_script-js-extra">var afp_vars = { "afp_nonce": "f1b7720153", "afp_ajax_url": "https:\/\/www.childrenwithcancer.org.uk\/wp-admin\/admin-ajax.php" };</script>
+  <script type="text/javascript" src="autoptimize/js/autoptimize_single_bcf4f684ccf853c196e60722e3322a03.js"
+    id="afp_script-js"></script>
+  <link rel="https://api.w.org/" href="https://www.childrenwithcancer.org.uk/wp-json/" />
+  <link rel='shortlink' href='https://www.childrenwithcancer.org.uk/?p=42666' />
+  <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
+    href="https://www.childrenwithcancer.org.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.childrenwithcancer.org.uk%2Fstories%2Fpatient-story-thomas-d%2F" />
+  <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
+    href="https://www.childrenwithcancer.org.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.childrenwithcancer.org.uk%2Fstories%2Fpatient-story-thomas-d%2F&#038;format=xml" />
+  <script type="text/javascript" src="https://secure.24-astute.com/js/795893.js"></script> <noscript><img
+      src="https://secure.24-astute.com/795893.png" style="display:none;" /></noscript>
+  <script type="text/javascript">var ajaxurl = "https:\/\/www.childrenwithcancer.org.uk\/wp-admin\/admin-ajax.php";
+    var ajaxnonce = "8c1a630d86";</script>
+  <link rel="icon"
+    href="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/cropped-Logo-Full-Colour-RGB-smaller-1-390x390.png"
+    sizes="32x32" />
+  <link rel="icon"
+    href="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/cropped-Logo-Full-Colour-RGB-smaller-1-390x390.png"
+    sizes="192x192" />
+  <link rel="apple-touch-icon"
+    href="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/cropped-Logo-Full-Colour-RGB-smaller-1-390x390.png" />
+  <meta name="msapplication-TileImage"
+    content="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/cropped-Logo-Full-Colour-RGB-smaller-1-390x390.png" />
+  <script defer src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body class="stories-template-default single single-stories postid-42666 side-collapse-container customize-support">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPGHPB3" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <header class="nogoldheader">
+    <div class="signup-form-backdrop"></div>
+    <div class="signup-form">
+      <p class="signup-form-header" style="margin-top: 0 !important;">Newsletter Signup <span class="close">x</span></p>
+      <form id="dm_widget-2-1" class="dotdigital-signup-form widget" method="post"
+        action="https://www.childrenwithcancer.org.uk/wp-json/dotdigital/v1/signup-widget">
+        <div class="dotdigital-for-wordpress-widget-title">
+          <h2>Subscribe to our e-newsletter</h2>
+        </div>
+        <div class="dotdigital-for-wordpress-widget-description">
+          <p>Please complete the fields below:</p>
+        </div>
+        <div class="ddg-form-group"> <label for="email"> Your email address*: </label> <input class="email" type="email"
+            id="email" name="email" required /></div>
+        <div class="ddg-form-group"> <label for="datafields[FIRSTNAME][value]"> First Name * </label> <input
+            name="datafields[FIRSTNAME][type]" value="String" type="hidden" /> <input
+            name="datafields[FIRSTNAME][required]" value="1" type="hidden" /> <input class="form-control datafield"
+            type="text" data-datafield-name="FIRSTNAME" id="datafields[FIRSTNAME][value]"
+            name="datafields[FIRSTNAME][value]" data-required="1" required /></div>
+        <div class="ddg-form-group"> <label for="datafields[LASTNAME][value]"> Last Name </label> <input
+            name="datafields[LASTNAME][type]" value="String" type="hidden" /> <input
+            name="datafields[LASTNAME][required]" value="" type="hidden" /> <input class="form-control datafield"
+            type="text" data-datafield-name="LASTNAME" id="datafields[LASTNAME][value]"
+            name="datafields[LASTNAME][value]" /></div>
+        <div class="ddg-form-group"> <label for="datafields[EMAIL_OPTIN][value]"> By signing up to our e-newsletter we
+            will keep you up to date with all our latest news, events, campaigns and opportunities to support us!
+          </label> <input name="datafields[EMAIL_OPTIN][type]" value="Boolean" type="hidden" /> <input
+            name="datafields[EMAIL_OPTIN][required]" value="" type="hidden" />
+          <div class="ddg-radio-group"> <input class="radio datafield" type='radio' id='yes'
+              name='datafields[EMAIL_OPTIN][value]' data-datafield-name="EMAIL_OPTIN" value='Yes' checked /> <label
+              for='yes'>Yes</label><br> <input class='radio datafield' type='radio' id='no'
+              name='datafields[EMAIL_OPTIN][value]' data-datafield-name="EMAIL_OPTIN" value='No' /> <label
+              for='no'>No</label><br></div>
+        </div>
+        <div class="ddg-form-group"> <label for="datafields[TERMS_AND_CONDITIONS][value]"> Terms_and_conditions *
+          </label> <input name="datafields[TERMS_AND_CONDITIONS][type]" value="Boolean" type="hidden" /> <input
+            name="datafields[TERMS_AND_CONDITIONS][required]" value="1" type="hidden" />
+          <div class="ddg-radio-group"> <input class="radio datafield" type='radio' id='yes'
+              name='datafields[TERMS_AND_CONDITIONS][value]' data-datafield-name="TERMS_AND_CONDITIONS" value='Yes'
+              checked /> <label for='yes'>Yes</label><br> <input class='radio datafield' type='radio' id='no'
+              name='datafields[TERMS_AND_CONDITIONS][value]' data-datafield-name="TERMS_AND_CONDITIONS" value='No' />
+            <label for='no'>No</label><br>
+          </div>
+        </div> <input type="hidden" name="redirection" value="" /> <input type="hidden" name="widget_id"
+          value="dm_widget-2-1" /> <input type="hidden" name="origin"
+          value="https://www.childrenwithcancer.org.uk/stories/patient-story-thomas-d?page&amp;stories=patient-story-thomas-d&amp;post_type=stories&amp;name=patient-story-thomas-d" />
+        <input type="hidden" name="is_ajax" value="0" />
+        <div class="dotdigital-form-submit"> <button type="submit" name="dm_submit_btn">Sign Up</button></div>
+      </form>
+      <div class="form_messages"></div>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 navbar-default-row"> <a id="logo" href="https://www.childrenwithcancer.org.uk"
+              title="Children with Cancer UK"> <noscript><img src="2023/02/cwc-logo-new.png" alt="Logo" width="84"
+                  height="52" class="img-responsive" /></noscript><img
+                src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2084%2052%22%3E%3C/svg%3E'
+                data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/cwc-logo-new.png" alt="Logo"
+                width="84" height="52" class="lazyload img-responsive" /> </a>
+            <div class="navbar-header"> <button data-toggle="collapse-side" data-target=".side-collapse"
+                data-target-2=".side-collapse-container" type="button" class="navbar-toggle collapsed"> <span
+                  class="sr-only">Toggle navigation</span> <span class="hamburger-open"></span> </button> <a
+                href="#donate"
+                class="btn btn--primary hidden-lg">Donate</a></div>
+            <div class="side-collapse in">
+              <div id="close-nav" class="hidden-lg">
+                <div class="close-nav-cta"> <a href="#donate"
+                    class="btn btn--primary">Donate</a> <a href="index.html#newsletterIframe"
+                    class="btn btn--transparent">Sign up</a></div> <button data-toggle="collapse-side"
+                  data-target=".side-collapse" data-target-2=".side-collapse-container" type="button"> <span
+                    class="hamburger-close"></span> </button>
+              </div>
+              <ul class="nav navbar-nav navbar-new"> <span class="desktop">
+                  <ul id="menu-primary-new" class="nav navbar-nav">
+                    <li id="menu-item-44461"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-44461">
+                      <a class="link-class" href="https://www.childrenwithcancer.org.uk/how-you-can-help/">
+                        <div>Get involved</div> <b class="fa fa-chevron-down"></b>
+                      </a>
+                      <ul class="dropdown-menu depth_0">
+                        <li id="menu-item-44466"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44466"><a
+                            class="link-class"
+                            href="#donate"><noscript><img width="768"
+                                height="475" src="2024/07/Ameila-make-a-doantion-page-1-768x475.jpg"
+                                class="attachment-post-thumb size-post-thumb" alt="Ameila make a doantion page (1)"
+                                decoding="async" /></noscript><img width="768" height="475"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2024/07/Ameila-make-a-doantion-page-1-768x475.jpg"
+                              class="lazyload attachment-post-thumb size-post-thumb"
+                              alt="Ameila make a doantion page (1)" decoding="async" />
+                            <div>Donate now</div>
+                          </a></li>
+                        <li id="menu-item-44467"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-44467 dropdown-submenu">
+                          <a class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/events-hub-page/"><noscript><img width="768"
+                                height="475" src="2017/05/Marathon-Runners-1-768x475.jpg"
+                                class="attachment-post-thumb size-post-thumb" alt="Marathon runners celebrating"
+                                decoding="async"
+                                srcset="2017/05/Marathon-Runners-1-768x475.jpg 768w, 2017/05/Marathon-Runners-1-18x10.jpg 18w"
+                                sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2017/05/Marathon-Runners-1-768x475.jpg"
+                              class="lazyload attachment-post-thumb size-post-thumb" alt="Marathon runners celebrating"
+                              decoding="async"
+                              data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2017/05/Marathon-Runners-1-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2017/05/Marathon-Runners-1-18x10.jpg 18w"
+                              data-sizes="(max-width: 768px) 100vw, 768px" />
+                            <div>Challenge yourself</div>
+                          </a>
+                          <ul class="dropdown-menu sub-menu depth_1">
+                            <li id="menu-item-44469"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44469"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/event-category/charity-cycling/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img
+                                    src="2020/07/Kwik-Fit-1-million.jpg"></noscript><img class="lazyload"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/07/Kwik-Fit-1-million.jpg">
+                                <div>Cycle</div>
+                              </a></li>
+                            <li id="menu-item-44468"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44468"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/event-category/charity-run/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img
+                                    src="2020/07/Kwik-Fit-1-million.jpg"></noscript><img class="lazyload"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/07/Kwik-Fit-1-million.jpg">
+                                <div>Run</div>
+                              </a></li>
+                            <li id="menu-item-44470"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44470"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/event-category/social/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img
+                                    src="2020/07/Kwik-Fit-1-million.jpg"></noscript><img class="lazyload"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/07/Kwik-Fit-1-million.jpg">
+                                <div>Social</div>
+                              </a></li>
+                          </ul>
+                        </li>
+                        <li id="menu-item-44472"
+                          class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-44472 dropdown-submenu">
+                          <a class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/fundraising-hub/"><noscript><img width="768"
+                                height="475" src="2023/04/Group-of-fundraisers-768x475.jpg"
+                                class="attachment-post-thumb size-post-thumb" alt="Group of fundraisers"
+                                decoding="async"
+                                srcset="2023/04/Group-of-fundraisers-768x475.jpg 768w, 2023/04/Group-of-fundraisers-15x10.jpg 15w"
+                                sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/04/Group-of-fundraisers-768x475.jpg"
+                              class="lazyload attachment-post-thumb size-post-thumb" alt="Group of fundraisers"
+                              decoding="async"
+                              data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/04/Group-of-fundraisers-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/04/Group-of-fundraisers-15x10.jpg 15w"
+                              data-sizes="(max-width: 768px) 100vw, 768px" />
+                            <div>Fundraise for us</div>
+                          </a>
+                          <ul class="dropdown-menu sub-menu depth_1">
+                            <li id="menu-item-44476"
+                              class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-44476">
+                              <a class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/corporate-fundraising/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2024/10/Hero-1-scaled-e1728396895901-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb"
+                                    alt="Abbott lyon staff corporate photo" decoding="async"
+                                    srcset="2024/10/Hero-1-scaled-e1728396895901-768x475.jpg 768w, 2024/10/Hero-1-scaled-e1728396895901-17x10.jpg 17w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2024/10/Hero-1-scaled-e1728396895901-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="Abbott lyon staff corporate photo" decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2024/10/Hero-1-scaled-e1728396895901-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2024/10/Hero-1-scaled-e1728396895901-17x10.jpg 17w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Corporate fundraising</div>
+                              </a>
+                            </li>
+                            <li id="menu-item-44473"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44473"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/how-you-can-help/fundraising/charity-fundraising-ideas-tips/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2023/04/Group-of-fundraisers-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb" alt="Group of fundraisers"
+                                    decoding="async"
+                                    srcset="2023/04/Group-of-fundraisers-768x475.jpg 768w, 2023/04/Group-of-fundraisers-15x10.jpg 15w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/04/Group-of-fundraisers-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb" alt="Group of fundraisers"
+                                  decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/04/Group-of-fundraisers-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/04/Group-of-fundraisers-15x10.jpg 15w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Fundraising ideas</div>
+                              </a></li>
+                            <li id="menu-item-44474"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44474"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/how-you-can-help/other-ways-to-give/grand-draw/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2024/07/Morven-Real-Stories-min-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb" alt="Morven Real Stories min"
+                                    decoding="async"
+                                    srcset="2024/07/Morven-Real-Stories-min-768x475.jpg 768w, 2024/07/Morven-Real-Stories-min-18x10.jpg 18w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2024/07/Morven-Real-Stories-min-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb" alt="Morven Real Stories min"
+                                  decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2024/07/Morven-Real-Stories-min-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2024/07/Morven-Real-Stories-min-18x10.jpg 18w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Our Grand Draws</div>
+                              </a></li>
+                            <li id="menu-item-44477"
+                              class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-44477">
+                              <a class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/how-you-can-help/cancer-charity-events/pyjamarama/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2023/01/Little-Green-Junior-School-Pijamarama-13-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb"
+                                    alt="Little Green Junior School Pjamarama" decoding="async" /></noscript><img
+                                  width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/01/Little-Green-Junior-School-Pijamarama-13-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="Little Green Junior School Pjamarama" decoding="async" />
+                                <div>Pyjamarama</div>
+                              </a>
+                            </li>
+                            <li id="menu-item-45317"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45317"><a
+                                class="link-class" href="https://childrenwithcancershop.org.uk/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img
+                                    src="2020/07/Kwik-Fit-1-million.jpg"></noscript><img class="lazyload"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/07/Kwik-Fit-1-million.jpg">
+                                <div>Shop</div>
+                              </a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-44462"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-44462">
+                      <a class="link-class" href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/">
+                        <div>Find support</div> <b class="fa fa-chevron-down"></b>
+                      </a>
+                      <ul class="dropdown-menu depth_0">
+                        <li id="menu-item-44498"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-44498 dropdown-submenu">
+                          <a class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/understanding-cancer/"><noscript><img
+                                width="768" height="475" src="2023/07/Image-for-outer--768x475.jpg"
+                                class="attachment-post-thumb size-post-thumb"
+                                alt="Jack sitting in hospital bed holding his mums hand" decoding="async"
+                                srcset="2023/07/Image-for-outer--768x475.jpg 768w, 2023/07/Image-for-outer--15x10.jpg 15w"
+                                sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/07/Image-for-outer--768x475.jpg"
+                              class="lazyload attachment-post-thumb size-post-thumb"
+                              alt="Jack sitting in hospital bed holding his mums hand" decoding="async"
+                              data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/07/Image-for-outer--768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/07/Image-for-outer--15x10.jpg 15w"
+                              data-sizes="(max-width: 768px) 100vw, 768px" />
+                            <div>Understanding cancer</div>
+                          </a>
+                          <ul class="dropdown-menu sub-menu depth_1">
+                            <li id="menu-item-44501"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44501"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/understanding-cancer/causes-childhood-cancer/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2017/01/Middle-left-regular-giving-3-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb" alt="Eva hugging her teddy bear"
+                                    decoding="async"
+                                    srcset="2017/01/Middle-left-regular-giving-3-768x475.jpg 768w, 2017/01/Middle-left-regular-giving-3-15x10.jpg 15w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2017/01/Middle-left-regular-giving-3-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="Eva hugging her teddy bear" decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2017/01/Middle-left-regular-giving-3-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2017/01/Middle-left-regular-giving-3-15x10.jpg 15w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Cancer causes</div>
+                              </a></li>
+                            <li id="menu-item-44502"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44502"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/we-fund-research/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2023/02/3-researchers-watching-female-researchers-with-pipette-min-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb"
+                                    alt="3 researchers watching female researchers with pipette min" decoding="async"
+                                    srcset="2023/02/3-researchers-watching-female-researchers-with-pipette-min-768x475.jpg 768w, 2023/02/3-researchers-watching-female-researchers-with-pipette-min-15x10.jpg 15w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/3-researchers-watching-female-researchers-with-pipette-min-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="3 researchers watching female researchers with pipette min" decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/3-researchers-watching-female-researchers-with-pipette-min-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/3-researchers-watching-female-researchers-with-pipette-min-15x10.jpg 15w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Cancer research</div>
+                              </a></li>
+                            <li id="menu-item-44500"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44500"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/understanding-cancer/treatments/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2020/10/female-researcher-looking-and-using-a-microscope-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb"
+                                    alt="Cancer treatments being tested in a laboratory by a female researcher"
+                                    decoding="async"
+                                    srcset="2020/10/female-researcher-looking-and-using-a-microscope-768x475.jpg 768w, 2020/10/female-researcher-looking-and-using-a-microscope-15x10.jpg 15w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/10/female-researcher-looking-and-using-a-microscope-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="Cancer treatments being tested in a laboratory by a female researcher"
+                                  decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/10/female-researcher-looking-and-using-a-microscope-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/10/female-researcher-looking-and-using-a-microscope-15x10.jpg 15w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Cancer treatment</div>
+                              </a></li>
+                            <li id="menu-item-44499"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44499"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/understanding-cancer/types-of-cancer/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2016/09/cancer-type-banner-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb"
+                                    alt="Germ cell cancer is shown in a laboratory" decoding="async" /></noscript><img
+                                  width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2016/09/cancer-type-banner-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="Germ cell cancer is shown in a laboratory" decoding="async" />
+                                <div>Cancer types</div>
+                              </a></li>
+                          </ul>
+                        </li>
+                        <li id="menu-item-44503"
+                          class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-44503 dropdown-submenu">
+                          <a class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/coping-with-cancer/"><noscript><img
+                                width="768" height="475" src="2023/02/Lucy-1-min-768x475.jpg"
+                                class="attachment-post-thumb size-post-thumb" alt="Lucy (1) min"
+                                decoding="async" /></noscript><img width="768" height="475"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/Lucy-1-min-768x475.jpg"
+                              class="lazyload attachment-post-thumb size-post-thumb" alt="Lucy (1) min"
+                              decoding="async" />
+                            <div>Coping with cancer</div>
+                          </a>
+                          <ul class="dropdown-menu sub-menu depth_1">
+                            <li id="menu-item-44505"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44505"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/welfare-category/days-out-for-families/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img
+                                    src="2020/07/Kwik-Fit-1-million.jpg"></noscript><img class="lazyload"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/07/Kwik-Fit-1-million.jpg">
+                                <div>Family days out</div>
+                              </a></li>
+                            <li id="menu-item-44504"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44504"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/coping-with-cancer/help-and-support/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2016/11/colouring-768x475.jpg" class="attachment-post-thumb size-post-thumb"
+                                    alt="We provide cancer support and help in a variety of forms." decoding="async"
+                                    srcset="2016/11/colouring-768x475.jpg 768w, 2016/11/colouring-16x10.jpg 16w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2016/11/colouring-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="We provide cancer support and help in a variety of forms." decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2016/11/colouring-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2016/11/colouring-16x10.jpg 16w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Help &#038; support</div>
+                              </a></li>
+                            <li id="menu-item-44506"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44506"><a
+                                class="link-class" href="https://www.childrenwithcancer.org.uk/share-your-story/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2021/07/Nieve-During-treatment-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb" alt="Nieve During treatment"
+                                    decoding="async"
+                                    srcset="2021/07/Nieve-During-treatment-768x475.jpg 768w, 2021/07/Nieve-During-treatment-15x10.jpg 15w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2021/07/Nieve-During-treatment-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb" alt="Nieve During treatment"
+                                  decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2021/07/Nieve-During-treatment-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2021/07/Nieve-During-treatment-15x10.jpg 15w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Share your story</div>
+                              </a></li>
+                            <li id="menu-item-44507"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44507"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/coping-with-cancer/your-child-is-not-alone/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2019/06/blue-t-768x475.jpg" class="attachment-post-thumb size-post-thumb"
+                                    alt="" decoding="async"
+                                    srcset="2019/06/blue-t-768x475.jpg 768w, 2019/06/blue-t-14x10.jpg 14w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2019/06/blue-t-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb" alt="" decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2019/06/blue-t-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2019/06/blue-t-14x10.jpg 14w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Your child is not alone</div>
+                              </a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-44487"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-44487">
+                      <a class="link-class" href="https://www.childrenwithcancer.org.uk/about-us/">
+                        <div>About us</div> <b class="fa fa-chevron-down"></b>
+                      </a>
+                      <ul class="dropdown-menu depth_0">
+                        <li id="menu-item-44463"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-44463 dropdown-submenu">
+                          <a class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/about-us/what-we-do/"><noscript><img width="768"
+                                height="475" src="2020/01/CWCZIPPOS_344-768x475.jpg"
+                                class="attachment-post-thumb size-post-thumb"
+                                alt="Daisy holding balloons, leaning against a tree" decoding="async"
+                                srcset="2020/01/CWCZIPPOS_344-768x475.jpg 768w, 2020/01/CWCZIPPOS_344-15x10.jpg 15w"
+                                sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/01/CWCZIPPOS_344-768x475.jpg"
+                              class="lazyload attachment-post-thumb size-post-thumb"
+                              alt="Daisy holding balloons, leaning against a tree" decoding="async"
+                              data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/01/CWCZIPPOS_344-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/01/CWCZIPPOS_344-15x10.jpg 15w"
+                              data-sizes="(max-width: 768px) 100vw, 768px" />
+                            <div>What we do</div>
+                          </a>
+                          <ul class="dropdown-menu sub-menu depth_1">
+                            <li id="menu-item-44481"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44481"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/we-fund-research/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2023/02/3-researchers-watching-female-researchers-with-pipette-min-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb"
+                                    alt="3 researchers watching female researchers with pipette min" decoding="async"
+                                    srcset="2023/02/3-researchers-watching-female-researchers-with-pipette-min-768x475.jpg 768w, 2023/02/3-researchers-watching-female-researchers-with-pipette-min-15x10.jpg 15w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/3-researchers-watching-female-researchers-with-pipette-min-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="3 researchers watching female researchers with pipette min" decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/3-researchers-watching-female-researchers-with-pipette-min-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/3-researchers-watching-female-researchers-with-pipette-min-15x10.jpg 15w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>We fund research</div>
+                              </a></li>
+                            <li id="menu-item-44485"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44485"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/about-us/what-we-do/we-help-families/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2023/02/Ameia-min-768x475.jpg" class="attachment-post-thumb size-post-thumb"
+                                    alt="Ameia min" decoding="async"
+                                    srcset="2023/02/Ameia-min-768x475.jpg 768w, 2023/02/Ameia-min-16x10.jpg 16w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/Ameia-min-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb" alt="Ameia min"
+                                  decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/Ameia-min-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/Ameia-min-16x10.jpg 16w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>We help families</div>
+                              </a></li>
+                            <li id="menu-item-44486"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44486"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/about-us/what-we-do/we-raise-awareness/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2020/01/Bella-Family2000x1333-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb"
+                                    alt="Bella and her family on a day out at Zippos Circus" decoding="async"
+                                    srcset="2020/01/Bella-Family2000x1333-768x475.jpg 768w, 2020/01/Bella-Family2000x1333-15x10.jpg 15w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/01/Bella-Family2000x1333-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="Bella and her family on a day out at Zippos Circus" decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/01/Bella-Family2000x1333-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/01/Bella-Family2000x1333-15x10.jpg 15w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>We raise awareness</div>
+                              </a></li>
+                          </ul>
+                        </li>
+                        <li id="menu-item-44488"
+                          class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-44488 dropdown-submenu">
+                          <a class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/about-us/who-we-are/"><noscript><img width="768"
+                                height="475" src="2020/05/Zippos-768x475.jpg"
+                                class="attachment-post-thumb size-post-thumb"
+                                alt="A family affected by cancer visit our free family event at Zippos Circus"
+                                decoding="async" srcset="2020/05/Zippos-768x475.jpg 768w, 2020/05/Zippos-15x10.jpg 15w"
+                                sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/05/Zippos-768x475.jpg"
+                              class="lazyload attachment-post-thumb size-post-thumb"
+                              alt="A family affected by cancer visit our free family event at Zippos Circus"
+                              decoding="async"
+                              data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/05/Zippos-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/05/Zippos-15x10.jpg 15w"
+                              data-sizes="(max-width: 768px) 100vw, 768px" />
+                            <div>Who we are</div>
+                          </a>
+                          <ul class="dropdown-menu sub-menu depth_1">
+                            <li id="menu-item-44490"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44490"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/about-us/who-we-are/our-impact-and-success/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2023/02/Sienna-WITH-NURSE-IN-HOSPITAL-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb" alt="Sienna WITH NURSE IN HOSPITAL"
+                                    decoding="async"
+                                    srcset="2023/02/Sienna-WITH-NURSE-IN-HOSPITAL-768x475.jpg 768w, 2023/02/Sienna-WITH-NURSE-IN-HOSPITAL-15x10.jpg 15w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/Sienna-WITH-NURSE-IN-HOSPITAL-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="Sienna WITH NURSE IN HOSPITAL" decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/Sienna-WITH-NURSE-IN-HOSPITAL-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/02/Sienna-WITH-NURSE-IN-HOSPITAL-15x10.jpg 15w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Our impact &#038; success</div>
+                              </a></li>
+                            <li id="menu-item-44489"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44489"><a
+                                class="link-class"
+                                href="https://www.childrenwithcancer.org.uk/about-us/who-we-are/our-story/"><b
+                                  class="fa fa-chevron-right"></b><noscript><img width="768" height="475"
+                                    src="2020/09/Eddie-and-Marion-sitting-together-smiling-at-camera.-min-768x475.jpg"
+                                    class="attachment-post-thumb size-post-thumb"
+                                    alt="Eddie and Marion sitting together smiling at camera. min" decoding="async"
+                                    srcset="2020/09/Eddie-and-Marion-sitting-together-smiling-at-camera.-min-768x475.jpg 768w, 2020/09/Eddie-and-Marion-sitting-together-smiling-at-camera.-min-15x10.jpg 15w"
+                                    sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                                  src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                                  data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/09/Eddie-and-Marion-sitting-together-smiling-at-camera.-min-768x475.jpg"
+                                  class="lazyload attachment-post-thumb size-post-thumb"
+                                  alt="Eddie and Marion sitting together smiling at camera. min" decoding="async"
+                                  data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/09/Eddie-and-Marion-sitting-together-smiling-at-camera.-min-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/09/Eddie-and-Marion-sitting-together-smiling-at-camera.-min-15x10.jpg 15w"
+                                  data-sizes="(max-width: 768px) 100vw, 768px" />
+                                <div>Our story</div>
+                              </a></li>
+                            <li id="menu-item-45913"
+                              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45913"><a
+                                class="link-class" href="https://www.childrenwithcancer.org.uk/safeguarding-policy/"><b
+                                  class="fa fa-chevron-right"></b>
+                                <div>Safeguarding policy</div>
+                              </a></li>
+                          </ul>
+                        </li>
+                        <li id="menu-item-44491"
+                          class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-44491"><a
+                            class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/about-us/who-we-are/charity-news/"><noscript><img
+                                width="768" height="475" src="2019/08/MG_0837-768x475.jpg"
+                                class="attachment-post-thumb size-post-thumb" alt="Nieve in hospital" decoding="async"
+                                srcset="2019/08/MG_0837-768x475.jpg 768w, 2019/08/MG_0837-15x10.jpg 15w"
+                                sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2019/08/MG_0837-768x475.jpg"
+                              class="lazyload attachment-post-thumb size-post-thumb" alt="Nieve in hospital"
+                              decoding="async"
+                              data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2019/08/MG_0837-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2019/08/MG_0837-15x10.jpg 15w"
+                              data-sizes="(max-width: 768px) 100vw, 768px" />
+                            <div>Charity news</div>
+                          </a></li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-44464"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-44464">
+                      <a class="link-class" href="https://www.childrenwithcancer.org.uk/stories/">
+                        <div>Stories</div> <b class="fa fa-chevron-down"></b>
+                      </a>
+                      <ul class="dropdown-menu depth_0">
+                        <li id="menu-item-44495"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44495"><a
+                            class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/childhood-cancer-blogs/"><noscript><img
+                                src="2020/07/Kwik-Fit-1-million.jpg"></noscript><img class="lazyload"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/07/Kwik-Fit-1-million.jpg">
+                            <div>Childhood cancer blogs</div>
+                          </a></li>
+                        <li id="menu-item-44494"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44494"><a
+                            class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/story-category/childhood-cancer-stories/"><noscript><img
+                                src="2020/07/Kwik-Fit-1-million.jpg"></noscript><img class="lazyload"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/07/Kwik-Fit-1-million.jpg">
+                            <div>Childhood cancer stories</div>
+                          </a></li>
+                        <li id="menu-item-44493"
+                          class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-44493"><a
+                            class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/story-category/get-involved-stories/"><noscript><img
+                                src="2020/07/Kwik-Fit-1-million.jpg"></noscript><img class="lazyload"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/07/Kwik-Fit-1-million.jpg">
+                            <div>Fundraising stories</div>
+                          </a></li>
+                        <li id="menu-item-44496"
+                          class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-44496"><a
+                            class="link-class"
+                            href="https://www.childrenwithcancer.org.uk/share-your-story/"><noscript><img width="768"
+                                height="475" src="2021/07/Nieve-During-treatment-768x475.jpg"
+                                class="attachment-post-thumb size-post-thumb" alt="Nieve During treatment"
+                                decoding="async"
+                                srcset="2021/07/Nieve-During-treatment-768x475.jpg 768w, 2021/07/Nieve-During-treatment-15x10.jpg 15w"
+                                sizes="(max-width: 768px) 100vw, 768px" /></noscript><img width="768" height="475"
+                              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20475%22%3E%3C/svg%3E'
+                              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2021/07/Nieve-During-treatment-768x475.jpg"
+                              class="lazyload attachment-post-thumb size-post-thumb" alt="Nieve During treatment"
+                              decoding="async"
+                              data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2021/07/Nieve-During-treatment-768x475.jpg 768w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2021/07/Nieve-During-treatment-15x10.jpg 15w"
+                              data-sizes="(max-width: 768px) 100vw, 768px" />
+                            <div>Share your story</div>
+                          </a></li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-44465"
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44465"><a
+                        class="link-class" href="https://www.childrenwithcancer.org.uk/contact-us/">
+                        <div>Contact</div>
+                      </a></li>
+                  </ul>
+                </span> <span class="mobile">
+                  <li class="search hidden-lg">
+                    <form role="search" method="get" id="searchform" class="searchform"
+                      action="https://www.childrenwithcancer.org.uk">
+                      <div> <label class="screen-reader-text" for="s">Search for:</label> <input type="text" value=""
+                          name="s" id="s" placeholder="Search"> <input type="submit" id="searchsubmit" value="Search">
+                      </div>
+                    </form>
+                  </li>
+                  <ul id="menu-primary-new-1" class="nav navbar-nav">
+                    <li
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44461 dropdown">
+                      <a title="Get involved" data-toggle="dropdown" href="index.html#">Get involved <span
+                          class="fa fa-chevron-down"></span></a>
+                      <ul role="menu" class=" dropdown-menu">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44466"><a
+                            title="Donate now" href="#donate">Donate
+                            now</a></li>
+                        <li
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44467 dropdown">
+                          <a title="Challenge yourself"
+                            href="https://www.childrenwithcancer.org.uk/events-hub-page/">Challenge yourself</a>
+                          <ul role="menu" class=" dropdown-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44469"><a
+                                title="Cycle"
+                                href="https://www.childrenwithcancer.org.uk/event-category/charity-cycling/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Cycle</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44468"><a
+                                title="Run" href="https://www.childrenwithcancer.org.uk/event-category/charity-run/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Run</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44470"><a
+                                title="Social" href="https://www.childrenwithcancer.org.uk/event-category/social/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Social</a></li>
+                          </ul>
+                        </li>
+                        <li
+                          class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44472 dropdown">
+                          <a title="Fundraise for us"
+                            href="https://www.childrenwithcancer.org.uk/fundraising-hub/">Fundraise for us</a>
+                          <ul role="menu" class=" dropdown-menu">
+                            <li
+                              class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-44476">
+                              <a title="Corporate fundraising"
+                                href="https://www.childrenwithcancer.org.uk/corporate-fundraising/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Corporate fundraising</a>
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44473"><a
+                                title="Fundraising ideas"
+                                href="https://www.childrenwithcancer.org.uk/how-you-can-help/fundraising/charity-fundraising-ideas-tips/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Fundraising ideas</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44474"><a
+                                title="Our Grand Draws"
+                                href="https://www.childrenwithcancer.org.uk/how-you-can-help/other-ways-to-give/grand-draw/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Our Grand Draws</a></li>
+                            <li
+                              class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-44477">
+                              <a title="Pyjamarama"
+                                href="https://www.childrenwithcancer.org.uk/how-you-can-help/cancer-charity-events/pyjamarama/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Pyjamarama</a>
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45317"><a
+                                title="Shop" href="https://childrenwithcancershop.org.uk/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Shop</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44462 dropdown">
+                      <a title="Find support" data-toggle="dropdown" href="index.html#">Find support <span
+                          class="fa fa-chevron-down"></span></a>
+                      <ul role="menu" class=" dropdown-menu">
+                        <li
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44498 dropdown">
+                          <a title="Understanding cancer"
+                            href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/understanding-cancer/">Understanding
+                            cancer</a>
+                          <ul role="menu" class=" dropdown-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44501"><a
+                                title="Cancer causes"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/understanding-cancer/causes-childhood-cancer/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Cancer causes</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44502"><a
+                                title="Cancer research"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/we-fund-research/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Cancer research</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44500"><a
+                                title="Cancer treatment"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/understanding-cancer/treatments/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Cancer treatment</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44499"><a
+                                title="Cancer types"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/understanding-cancer/types-of-cancer/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Cancer types</a></li>
+                          </ul>
+                        </li>
+                        <li
+                          class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44503 dropdown">
+                          <a title="Coping with cancer"
+                            href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/coping-with-cancer/">Coping
+                            with cancer</a>
+                          <ul role="menu" class=" dropdown-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44505"><a
+                                title="Family days out"
+                                href="https://www.childrenwithcancer.org.uk/welfare-category/days-out-for-families/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Family days out</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44504"><a
+                                title="Help &amp; support"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/coping-with-cancer/help-and-support/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Help &#038; support</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44506"><a
+                                title="Share your story"
+                                href="https://www.childrenwithcancer.org.uk/share-your-story/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Share your story</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44507"><a
+                                title="Your child is not alone"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/coping-with-cancer/your-child-is-not-alone/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Your child is not alone</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44487 dropdown">
+                      <a title="About us" data-toggle="dropdown" href="index.html#">About us <span
+                          class="fa fa-chevron-down"></span></a>
+                      <ul role="menu" class=" dropdown-menu">
+                        <li
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44463 dropdown">
+                          <a title="What we do" href="https://www.childrenwithcancer.org.uk/about-us/what-we-do/">What
+                            we do</a>
+                          <ul role="menu" class=" dropdown-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44481"><a
+                                title="We fund research"
+                                href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/we-fund-research/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;We fund research</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44485"><a
+                                title="We help families"
+                                href="https://www.childrenwithcancer.org.uk/about-us/what-we-do/we-help-families/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;We help families</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44486"><a
+                                title="We raise awareness"
+                                href="https://www.childrenwithcancer.org.uk/about-us/what-we-do/we-raise-awareness/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;We raise awareness</a></li>
+                          </ul>
+                        </li>
+                        <li
+                          class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44488 dropdown">
+                          <a title="Who we are" href="https://www.childrenwithcancer.org.uk/about-us/who-we-are/">Who we
+                            are</a>
+                          <ul role="menu" class=" dropdown-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44490"><a
+                                title="Our impact &amp; success"
+                                href="https://www.childrenwithcancer.org.uk/about-us/who-we-are/our-impact-and-success/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Our impact &#038; success</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44489"><a
+                                title="Our story"
+                                href="https://www.childrenwithcancer.org.uk/about-us/who-we-are/our-story/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Our story</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45913"><a
+                                title="Safeguarding policy"
+                                href="https://www.childrenwithcancer.org.uk/safeguarding-policy/"><b
+                                  class="fa fa-chevron-right"></b>&nbsp;&nbsp;Safeguarding policy</a></li>
+                          </ul>
+                        </li>
+                        <li class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-44491"><a
+                            title="Charity news"
+                            href="https://www.childrenwithcancer.org.uk/about-us/who-we-are/charity-news/">Charity
+                            news</a></li>
+                      </ul>
+                    </li>
+                    <li
+                      class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-44464 dropdown">
+                      <a title="Stories" data-toggle="dropdown" href="index.html#">Stories <span
+                          class="fa fa-chevron-down"></span></a>
+                      <ul role="menu" class=" dropdown-menu">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44495"><a
+                            title="Childhood cancer blogs"
+                            href="https://www.childrenwithcancer.org.uk/childhood-cancer-blogs/">Childhood cancer
+                            blogs</a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44494"><a
+                            title="Childhood cancer stories"
+                            href="https://www.childrenwithcancer.org.uk/story-category/childhood-cancer-stories/">Childhood
+                            cancer stories</a></li>
+                        <li class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-44493"><a
+                            title="Fundraising stories"
+                            href="https://www.childrenwithcancer.org.uk/story-category/get-involved-stories/">Fundraising
+                            stories</a></li>
+                        <li class="column-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-44496"><a
+                            title="Share your story"
+                            href="https://www.childrenwithcancer.org.uk/share-your-story/">Share your story</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44465"><a
+                        title="Contact" href="https://www.childrenwithcancer.org.uk/contact-us/">Contact</a></li>
+                  </ul>
+                  <div class="mobile-social visible-md visible-sm visible-xs">
+                    <ul id="social-icons">
+                      <li><a href="https://www.facebook.com/childrenwithcanceruk/" target="_blank"><svg id='Layer_1'
+                            data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6.61 12.82'>
+                            <defs></defs>
+                            <title>Facebook</title>
+                            <path class='out-1'
+                              d='M1.93,7.09H0V4.81H1.93V3A3,3,0,0,1,2.73.79,2.88,2.88,0,0,1,4.86,0,11.87,11.87,0,0,1,6.61.1v2H5.41a1.18,1.18,0,0,0-.93.3,1.3,1.3,0,0,0-.2.8V4.81H6.41l-.3,2.28H4.28v5.73H1.93Z' />
+                          </svg></a></li>
+                      <li><a href="https://twitter.com/CwC_UK" target="_blank"><svg width='13' height='13'
+                            viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                            <g clip-path='url(#clip0_7_19)'>
+                              <path d='M12.6404 0L1.44392 13H0.10558L11.3024 0H12.6404Z' fill='#FF7600' />
+                              <path fill-rule='evenodd' clip-rule='evenodd'
+                                d='M9.0884 12.6389L0.683946 0.361092H3.9116L12.3161 12.6389H9.0884Z' fill='white' />
+                              <path
+                                d='M3.53215 1.08333L10.9474 11.9167H9.46784L2.05256 1.08333H3.53215ZM4.10151 0H0L8.89849 13H13L4.10151 0Z'
+                                fill='#FF7600' />
+                            </g>
+                            <defs>
+                              <clipPath id='clip0_7_19'>
+                                <rect width='13' height='13' fill='white' />
+                              </clipPath>
+                            </defs>
+                          </svg></a></li>
+                      <li><a href="https://www.youtube.com/user/CHILDRENwCANCER" target="_blank"><svg id='Layer_1'
+                            data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.67 9.62'>
+                            <defs></defs>
+                            <title>Youtube</title>
+                            <path class='der-1'
+                              d='M13.4,1.5a11.09,11.09,0,0,1,.25,2.06l0,1.25,0,1.25a11.12,11.12,0,0,1-.25,2.08,1.93,1.93,0,0,1-.45.75,1.71,1.71,0,0,1-.78.45,17.39,17.39,0,0,1-3.05.25l-2.28,0-2.28,0A17.66,17.66,0,0,1,1.5,9.34a1.63,1.63,0,0,1-.77-.45,1.72,1.72,0,0,1-.45-.75A10.33,10.33,0,0,1,0,6.06L0,4.81C0,4.44,0,4,0,3.56A10.29,10.29,0,0,1,.28,1.5,1.63,1.63,0,0,1,.73.73,1.63,1.63,0,0,1,1.5.28,17.66,17.66,0,0,1,4.56,0L6.84,0,9.12,0a17.39,17.39,0,0,1,3.05.25A1.71,1.71,0,0,1,13,.73,1.81,1.81,0,0,1,13.4,1.5Zm-8,5.36L9,4.81l-3.59-2Z' />
+                          </svg></a></li>
+                      <li><a href="https://www.flickr.com/photos/25467324@N04/albums" target="_blank"><svg id='Layer_1'
+                            data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.26 5'>
+                            <defs></defs>
+                            <title>Flicker</title>
+                            <path class='dis-1'
+                              d='M2.52,5a2.36,2.36,0,0,0,1.75-.73A2.38,2.38,0,0,0,5,2.5,2.38,2.38,0,0,0,4.27.73,2.38,2.38,0,0,0,2.5,0,2.38,2.38,0,0,0,.73.73,2.38,2.38,0,0,0,0,2.5,2.38,2.38,0,0,0,.73,4.27,2.41,2.41,0,0,0,2.52,5ZM8.78,5a2.36,2.36,0,0,0,1.75-.73,2.38,2.38,0,0,0,.73-1.77A2.38,2.38,0,0,0,10.53.73,2.38,2.38,0,0,0,8.76,0,2.38,2.38,0,0,0,7,.73,2.38,2.38,0,0,0,6.26,2.5,2.38,2.38,0,0,0,7,4.27,2.41,2.41,0,0,0,8.78,5Z' />
+                          </svg></a></li>
+                      <li><a href="https://www.linkedin.com/company/children-with-cancer-uk" target="_blank"><svg
+                            id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 11'>
+                            <defs></defs>
+                            <title>Linkedin</title>
+                            <path class='dis-1'
+                              d='M1.31,2.65a1.26,1.26,0,0,0,.94-.4,1.24,1.24,0,0,0,.4-.93A1.24,1.24,0,0,0,2.25.4,1.26,1.26,0,0,0,1.31,0,1.21,1.21,0,0,0,.38.4,1.29,1.29,0,0,0,0,1.32a1.3,1.3,0,0,0,.38.93A1.21,1.21,0,0,0,1.31,2.65ZM2.44,11h0V3.64H.17V11ZM11,11V7a5,5,0,0,0-.48-2.51,2.47,2.47,0,0,0-2.24-1,2.71,2.71,0,0,0-1.41.38,2,2,0,0,0-.75.79h0v-1H3.88V11H6.15V7.36a2.83,2.83,0,0,1,.24-1.31,1.22,1.22,0,0,1,1.14-.58,1,1,0,0,1,1,.65,3.72,3.72,0,0,1,.17,1.3V11Z' />
+                          </svg></a></li>
+                      <li><a href="https://www.instagram.com/childrenwithcanceruk/" target="_blank"><svg id='Layer_1'
+                            data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.22 11.22'>
+                            <defs></defs>
+                            <title>Instagram</title>
+                            <path class='der-1'
+                              d='M11.19,3.28c0,.47,0,1.24,0,2.33s0,1.87,0,2.34A4.39,4.39,0,0,1,11,9.19,2.94,2.94,0,0,1,9.19,11,4.39,4.39,0,0,1,8,11.18c-.47,0-1.26,0-2.34,0s-1.87,0-2.34,0A3.74,3.74,0,0,1,2,10.94a2.61,2.61,0,0,1-1.09-.66A2.9,2.9,0,0,1,.25,9.19,4.39,4.39,0,0,1,0,8C0,7.48,0,6.7,0,5.61S0,3.74,0,3.27A4.39,4.39,0,0,1,.25,2,2.94,2.94,0,0,1,2,.25,4.39,4.39,0,0,1,3.27,0c.47,0,1.25,0,2.34,0S7.48,0,8,0A4.39,4.39,0,0,1,9.19.25,2.94,2.94,0,0,1,11,2,4.83,4.83,0,0,1,11.19,3.28ZM10,8.92a5.23,5.23,0,0,0,.2-1.36c0-.36,0-.88,0-1.55v-.8c0-.69,0-1.2,0-1.55A5,5,0,0,0,10,2.3,1.82,1.82,0,0,0,8.92,1.23,5,5,0,0,0,7.56,1C7.2,1,6.68,1,6,1h-.8C4.54,1,4,1,3.66,1a5.23,5.23,0,0,0-1.36.2A1.82,1.82,0,0,0,1.23,2.3,5,5,0,0,0,1,3.66C1,4,1,4.54,1,5.21V6C1,6.68,1,7.2,1,7.56a5.23,5.23,0,0,0,.2,1.36A1.88,1.88,0,0,0,2.3,10a5.23,5.23,0,0,0,1.36.2c.36,0,.88,0,1.55,0H6c.68,0,1.2,0,1.55,0A5,5,0,0,0,8.92,10,1.88,1.88,0,0,0,10,8.92ZM5.61,2.73a2.78,2.78,0,0,1,1.44.39,2.94,2.94,0,0,1,1,1,2.85,2.85,0,0,1,0,2.88,2.94,2.94,0,0,1-1,1,2.85,2.85,0,0,1-2.88,0,2.94,2.94,0,0,1-1-1,2.85,2.85,0,0,1,0-2.88,2.94,2.94,0,0,1,1-1A2.78,2.78,0,0,1,5.61,2.73Zm0,4.76A1.88,1.88,0,0,0,6.94,4.28,1.88,1.88,0,0,0,4.28,6.94,1.84,1.84,0,0,0,5.61,7.49ZM9.29,2.6a.68.68,0,1,0-1.15.48.65.65,0,0,0,.47.2.63.63,0,0,0,.47-.2A.81.81,0,0,0,9.29,2.6Z' />
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </span>
+                <li class="search-btn visible-lg dropdown-toggle" data-toggle="dropdown" role="button"
+                  aria-haspopup="true" aria-expanded="false"> <a href="https://www.childrenwithcancer.org.uk/"><i
+                      class="fa fa-search fa-lg"></i></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <form role="search" method="get" id="searchform" class="searchform"
+                        action="https://www.childrenwithcancer.org.uk">
+                        <div> <label class="screen-reader-text" for="s">Search for:</label> <input type="text" value=""
+                            name="s" id="s" placeholder="Search"> <input type="submit" id="searchsubmit" value="Search">
+                        </div>
+                      </form>
+                    </li>
+                  </ul>
+                </li> <a href="#donate"
+                  class="btn btn--primary cta hidden-xs hidden-sm hidden-md">Donate</a> <a
+                  href="index.html#newsletterIframe" class="btn btn--transparent hidden-xs hidden-sm hidden-md">Sign
+                  up</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-social visible-lg visible-xl">
+      <ul id="social-icons">
+        <li><a href="https://www.facebook.com/childrenwithcanceruk/" target="_blank"><svg id='Layer_1'
+              data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6.61 12.82'>
+              <defs></defs>
+              <title>Facebook</title>
+              <path class='out-1'
+                d='M1.93,7.09H0V4.81H1.93V3A3,3,0,0,1,2.73.79,2.88,2.88,0,0,1,4.86,0,11.87,11.87,0,0,1,6.61.1v2H5.41a1.18,1.18,0,0,0-.93.3,1.3,1.3,0,0,0-.2.8V4.81H6.41l-.3,2.28H4.28v5.73H1.93Z' />
+            </svg></a></li>
+        <li><a href="https://twitter.com/CwC_UK" target="_blank"><svg width='13' height='13' viewBox='0 0 13 13'
+              fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <g clip-path='url(#clip0_7_19)'>
+                <path d='M12.6404 0L1.44392 13H0.10558L11.3024 0H12.6404Z' fill='#FF7600' />
+                <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M9.0884 12.6389L0.683946 0.361092H3.9116L12.3161 12.6389H9.0884Z' fill='white' />
+                <path
+                  d='M3.53215 1.08333L10.9474 11.9167H9.46784L2.05256 1.08333H3.53215ZM4.10151 0H0L8.89849 13H13L4.10151 0Z'
+                  fill='#FF7600' />
+              </g>
+              <defs>
+                <clipPath id='clip0_7_19'>
+                  <rect width='13' height='13' fill='white' />
+                </clipPath>
+              </defs>
+            </svg></a></li>
+        <li><a href="https://www.youtube.com/user/CHILDRENwCANCER" target="_blank"><svg id='Layer_1' data-name='Layer 1'
+              xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.67 9.62'>
+              <defs></defs>
+              <title>Youtube</title>
+              <path class='der-1'
+                d='M13.4,1.5a11.09,11.09,0,0,1,.25,2.06l0,1.25,0,1.25a11.12,11.12,0,0,1-.25,2.08,1.93,1.93,0,0,1-.45.75,1.71,1.71,0,0,1-.78.45,17.39,17.39,0,0,1-3.05.25l-2.28,0-2.28,0A17.66,17.66,0,0,1,1.5,9.34a1.63,1.63,0,0,1-.77-.45,1.72,1.72,0,0,1-.45-.75A10.33,10.33,0,0,1,0,6.06L0,4.81C0,4.44,0,4,0,3.56A10.29,10.29,0,0,1,.28,1.5,1.63,1.63,0,0,1,.73.73,1.63,1.63,0,0,1,1.5.28,17.66,17.66,0,0,1,4.56,0L6.84,0,9.12,0a17.39,17.39,0,0,1,3.05.25A1.71,1.71,0,0,1,13,.73,1.81,1.81,0,0,1,13.4,1.5Zm-8,5.36L9,4.81l-3.59-2Z' />
+            </svg></a></li>
+        <li><a href="https://www.flickr.com/photos/25467324@N04/albums" target="_blank"><svg id='Layer_1'
+              data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.26 5'>
+              <defs></defs>
+              <title>Flicker</title>
+              <path class='dis-1'
+                d='M2.52,5a2.36,2.36,0,0,0,1.75-.73A2.38,2.38,0,0,0,5,2.5,2.38,2.38,0,0,0,4.27.73,2.38,2.38,0,0,0,2.5,0,2.38,2.38,0,0,0,.73.73,2.38,2.38,0,0,0,0,2.5,2.38,2.38,0,0,0,.73,4.27,2.41,2.41,0,0,0,2.52,5ZM8.78,5a2.36,2.36,0,0,0,1.75-.73,2.38,2.38,0,0,0,.73-1.77A2.38,2.38,0,0,0,10.53.73,2.38,2.38,0,0,0,8.76,0,2.38,2.38,0,0,0,7,.73,2.38,2.38,0,0,0,6.26,2.5,2.38,2.38,0,0,0,7,4.27,2.41,2.41,0,0,0,8.78,5Z' />
+            </svg></a></li>
+        <li><a href="https://www.linkedin.com/company/children-with-cancer-uk" target="_blank"><svg id='Layer_1'
+              data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 11'>
+              <defs></defs>
+              <title>Linkedin</title>
+              <path class='dis-1'
+                d='M1.31,2.65a1.26,1.26,0,0,0,.94-.4,1.24,1.24,0,0,0,.4-.93A1.24,1.24,0,0,0,2.25.4,1.26,1.26,0,0,0,1.31,0,1.21,1.21,0,0,0,.38.4,1.29,1.29,0,0,0,0,1.32a1.3,1.3,0,0,0,.38.93A1.21,1.21,0,0,0,1.31,2.65ZM2.44,11h0V3.64H.17V11ZM11,11V7a5,5,0,0,0-.48-2.51,2.47,2.47,0,0,0-2.24-1,2.71,2.71,0,0,0-1.41.38,2,2,0,0,0-.75.79h0v-1H3.88V11H6.15V7.36a2.83,2.83,0,0,1,.24-1.31,1.22,1.22,0,0,1,1.14-.58,1,1,0,0,1,1,.65,3.72,3.72,0,0,1,.17,1.3V11Z' />
+            </svg></a></li>
+        <li><a href="https://www.instagram.com/childrenwithcanceruk/" target="_blank"><svg id='Layer_1'
+              data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.22 11.22'>
+              <defs></defs>
+              <title>Instagram</title>
+              <path class='der-1'
+                d='M11.19,3.28c0,.47,0,1.24,0,2.33s0,1.87,0,2.34A4.39,4.39,0,0,1,11,9.19,2.94,2.94,0,0,1,9.19,11,4.39,4.39,0,0,1,8,11.18c-.47,0-1.26,0-2.34,0s-1.87,0-2.34,0A3.74,3.74,0,0,1,2,10.94a2.61,2.61,0,0,1-1.09-.66A2.9,2.9,0,0,1,.25,9.19,4.39,4.39,0,0,1,0,8C0,7.48,0,6.7,0,5.61S0,3.74,0,3.27A4.39,4.39,0,0,1,.25,2,2.94,2.94,0,0,1,2,.25,4.39,4.39,0,0,1,3.27,0c.47,0,1.25,0,2.34,0S7.48,0,8,0A4.39,4.39,0,0,1,9.19.25,2.94,2.94,0,0,1,11,2,4.83,4.83,0,0,1,11.19,3.28ZM10,8.92a5.23,5.23,0,0,0,.2-1.36c0-.36,0-.88,0-1.55v-.8c0-.69,0-1.2,0-1.55A5,5,0,0,0,10,2.3,1.82,1.82,0,0,0,8.92,1.23,5,5,0,0,0,7.56,1C7.2,1,6.68,1,6,1h-.8C4.54,1,4,1,3.66,1a5.23,5.23,0,0,0-1.36.2A1.82,1.82,0,0,0,1.23,2.3,5,5,0,0,0,1,3.66C1,4,1,4.54,1,5.21V6C1,6.68,1,7.2,1,7.56a5.23,5.23,0,0,0,.2,1.36A1.88,1.88,0,0,0,2.3,10a5.23,5.23,0,0,0,1.36.2c.36,0,.88,0,1.55,0H6c.68,0,1.2,0,1.55,0A5,5,0,0,0,8.92,10,1.88,1.88,0,0,0,10,8.92ZM5.61,2.73a2.78,2.78,0,0,1,1.44.39,2.94,2.94,0,0,1,1,1,2.85,2.85,0,0,1,0,2.88,2.94,2.94,0,0,1-1,1,2.85,2.85,0,0,1-2.88,0,2.94,2.94,0,0,1-1-1,2.85,2.85,0,0,1,0-2.88,2.94,2.94,0,0,1,1-1A2.78,2.78,0,0,1,5.61,2.73Zm0,4.76A1.88,1.88,0,0,0,6.94,4.28,1.88,1.88,0,0,0,4.28,6.94,1.84,1.84,0,0,0,5.61,7.49ZM9.29,2.6a.68.68,0,1,0-1.15.48.65.65,0,0,0,.47.2.63.63,0,0,0,.47-.2A.81.81,0,0,0,9.29,2.6Z' />
+            </svg></a></li>
+        <li> <a href="index.html#" class="social_share_toggle" target="_blank"><svg id='Layer_1' data-name='Layer 1'
+              xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 15.34'>
+              <defs></defs>
+              <title>Share Icon</title>
+              <path class='cls-1'
+                d='M12,6a1.34,1.34,0,0,0-1.33-1.33h-2V6h2v8H1.33V6h2V4.67h-2A1.33,1.33,0,0,0,0,6v8a1.34,1.34,0,0,0,1.33,1.33h9.34A1.34,1.34,0,0,0,12,14Z' />
+              <path class='cls-1'
+                d='M8.36,3a.66.66,0,0,1-.94,0l-.75-.75V8.67a.67.67,0,0,1-1.34,0V2.28L4.58,3a.66.66,0,0,1-.94-.94L5.53.2a.65.65,0,0,1,.94,0L8.36,2.09A.66.66,0,0,1,8.36,3Z' />
+            </svg></a></li>
+      </ul>
+      <div class="social_share"> <i class="fa fa-close closeSocials"></i>
+        <p>Share On Socials</p>
+        <div class="socials"> <a title="Share Patient+Story+%E2%80%93+Thomas+D on Facebook" rel="nofollow"
+            href="https://www.facebook.com/sharer/sharer.php?uhttps%3A%2F%2Fwww.childrenwithcancer.org.uk%2Fstories%2Fpatient-story-thomas-d%2F=&t=Patient+Story+%E2%80%93+Thomas+D "
+            target="_blank"><svg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 6.61 12.82'>
+              <defs></defs>
+              <title>Facebook</title>
+              <path class='out-1'
+                d='M1.93,7.09H0V4.81H1.93V3A3,3,0,0,1,2.73.79,2.88,2.88,0,0,1,4.86,0,11.87,11.87,0,0,1,6.61.1v2H5.41a1.18,1.18,0,0,0-.93.3,1.3,1.3,0,0,0-.2.8V4.81H6.41l-.3,2.28H4.28v5.73H1.93Z' />
+            </svg></a> <a title="Share Patient+Story+%E2%80%93+Thomas+D on Twitter" rel="nofollow"
+            href="https://twitter.com/intent/tweet?text=Patient+Story+%E2%80%93+Thomas+D &url=https%3A%2F%2Fwww.childrenwithcancer.org.uk%2Fstories%2Fpatient-story-thomas-d%2F"
+            target="_blank"><svg width='13' height='13' viewBox='0 0 13 13' fill='none'
+              xmlns='http://www.w3.org/2000/svg'>
+              <g clip-path='url(#clip0_7_19)'>
+                <path d='M12.6404 0L1.44392 13H0.10558L11.3024 0H12.6404Z' fill='#FF7600' />
+                <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M9.0884 12.6389L0.683946 0.361092H3.9116L12.3161 12.6389H9.0884Z' fill='white' />
+                <path
+                  d='M3.53215 1.08333L10.9474 11.9167H9.46784L2.05256 1.08333H3.53215ZM4.10151 0H0L8.89849 13H13L4.10151 0Z'
+                  fill='#FF7600' />
+              </g>
+              <defs>
+                <clipPath id='clip0_7_19'>
+                  <rect width='13' height='13' fill='white' />
+                </clipPath>
+              </defs>
+            </svg></a> <a title="Share Patient+Story+%E2%80%93+Thomas+D on Linkedin" rel="nofollow"
+            href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.childrenwithcancer.org.uk%2Fstories%2Fpatient-story-thomas-d%2F&title=Patient+Story+%E2%80%93+Thomas+D&summary="
+            target="_blank"><svg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 11 11'>
+              <defs></defs>
+              <title>Linkedin</title>
+              <path class='dis-1'
+                d='M1.31,2.65a1.26,1.26,0,0,0,.94-.4,1.24,1.24,0,0,0,.4-.93A1.24,1.24,0,0,0,2.25.4,1.26,1.26,0,0,0,1.31,0,1.21,1.21,0,0,0,.38.4,1.29,1.29,0,0,0,0,1.32a1.3,1.3,0,0,0,.38.93A1.21,1.21,0,0,0,1.31,2.65ZM2.44,11h0V3.64H.17V11ZM11,11V7a5,5,0,0,0-.48-2.51,2.47,2.47,0,0,0-2.24-1,2.71,2.71,0,0,0-1.41.38,2,2,0,0,0-.75.79h0v-1H3.88V11H6.15V7.36a2.83,2.83,0,0,1,.24-1.31,1.22,1.22,0,0,1,1.14-.58,1,1,0,0,1,1,.65,3.72,3.72,0,0,1,.17,1.3V11Z' />
+            </svg></a></div>
+      </div>
+    </div>
+  </header>
+  <div class="hidden"> <span id="coordinates"></span></div>
+  <div class="covid-pop">
+    <div class="covid-pop-inner"> <svg class="covid-pop-inner-corner covid-pop-inner-corner-left" viewBox="0 0 97 97"
+        fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M18.763 0.908691H2.81128C2.47637 0.908606 2.14472 0.974545 1.83528 1.10274C1.52584 1.23094 1.24466 1.41888 1.00782 1.65583C0.770968 1.89279 0.583087 2.17411 0.454903 2.48374C0.326718 2.79337 0.260742 3.12523 0.260742 3.46038L0.260742 75.9305C0.260742 81.5185 2.479 86.8777 6.42753 90.829C10.376 94.7803 15.7314 97.0001 21.3155 97.0001H75.4015C80.4916 97 85.4095 95.1545 89.2446 91.8053C93.0798 88.4561 95.5727 83.8299 96.2618 78.783C96.3063 78.4247 96.2739 78.061 96.1668 77.7161C96.0597 77.3713 95.8803 77.0533 95.6407 76.7833C95.401 76.5134 95.1066 76.2977 94.777 76.1506C94.4474 76.0036 94.0903 75.9285 93.7294 75.9305H23.8628C23.1863 75.9305 22.5376 75.6616 22.0593 75.183C21.5809 74.7043 21.3122 74.0551 21.3122 73.3782V3.46038C21.3122 2.78374 21.0437 2.13481 20.5656 1.65629C20.0875 1.17778 19.4391 0.908863 18.763 0.908691Z"
+          fill="#FF7621" />
+      </svg> <svg class="covid-pop-inner-corner covid-pop-inner-corner-right" viewBox="0 0 58 58" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M46.5803 57.6547H56.1514C56.5573 57.6547 56.9465 57.4933 57.2335 57.2062C57.5204 56.919 57.6816 56.5295 57.6816 56.1234L57.6816 12.6417C57.6816 9.28889 56.3507 6.07341 53.9816 3.70263C51.6125 1.33184 48.3992 -4.95911e-05 45.0488 -4.95911e-05L12.5993 -4.95911e-05C9.54538 -1.90735e-05 6.59485 1.10707 4.29377 3.11633C1.99269 5.1256 0.496849 7.901 0.0830841 10.9289C0.0563622 11.1439 0.0757675 11.3621 0.140011 11.569C0.204254 11.7759 0.311855 11.9667 0.455631 12.1287C0.599407 12.2906 0.776054 12.4201 0.973782 12.5083C1.1715 12.5966 1.38577 12.6416 1.60226 12.6404L43.5173 12.6404C43.7185 12.6402 43.9177 12.6797 44.1036 12.7567C44.2895 12.8337 44.4584 12.9465 44.6006 13.0889C44.7429 13.2312 44.8557 13.4002 44.9326 13.5863C45.0095 13.7723 45.049 13.9716 45.0488 14.173L45.0488 56.1234C45.0488 56.3246 45.0884 56.5238 45.1654 56.7097C45.2424 56.8956 45.3552 57.0644 45.4975 57.2066C45.6397 57.3488 45.8085 57.4616 45.9943 57.5385C46.1801 57.6154 46.3792 57.6548 46.5803 57.6547Z"
+          fill="#FF9821" />
+      </svg>
+      <div> <span class="covid-pop-close hamburger-close" onclick="closePopup()"></span>
+        <div class="covid-pop-content">
+          <div class="covid-pop-content-colour-overlay"></div>
+          <div class="covid-pop-content-text">
+            <div class="subtitle">
+              <h3>Please wait...</h3>
+              <p>10 children and young people are still being diagnosed every day in the UK.</p>
+              <p>We are entirely reliant on generous supporters like you.</p>
+            </div> <a href="#donate"
+              id="pop_up_button" class="btn btn--primary">Donate Now</a>
+          </div>
+          <div class="image-content-image"> <noscript><img width="335" height="284"
+                src="2020/04/Eva-Zippos-e1588251072621-335x284.jpg" class="attachment-covid-popup size-covid-popup"
+                alt="Eva-zippos" decoding="async"
+                srcset="2020/04/Eva-Zippos-e1588251072621-335x284.jpg 335w, 2020/04/Eva-Zippos-e1588251072621.jpg 862w"
+                sizes="(max-width: 335px) 100vw, 335px" /></noscript><img width="335" height="284"
+              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20335%20284%22%3E%3C/svg%3E'
+              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/04/Eva-Zippos-e1588251072621-335x284.jpg"
+              class="lazyload attachment-covid-popup size-covid-popup" alt="Eva-zippos" decoding="async"
+              data-srcset="https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/04/Eva-Zippos-e1588251072621-335x284.jpg 335w, https://www.childrenwithcancer.org.uk/wp-content/uploads/2020/04/Eva-Zippos-e1588251072621.jpg 862w"
+              data-sizes="(max-width: 335px) 100vw, 335px" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">var mouseX = 0;
+    var mouseY = 0;
+    var popupCounter = 0;
+
+    document.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      document.getElementById("coordinates").innerHTML = "<br />X: " + e.clientX + "px<br />Y: " + e.clientY + "px";
+    });
+
+    $(document).mouseleave(function () {
+      if (mouseY < 200) {
+        if (popupCounter < 1) {
+          $('.covid-pop').show();
+        }
+        popupCounter++;
+      }
+    });
+
+    function closePopup() {
+      $('.covid-pop').hide();
+    }</script>
+  <script type="text/javascript">$(document).ready(function () {
+
+
+    });
+
+    if ($(window).width() > 1200) {
+      $('.navbar-new li > ul.dropdown-menu').each(function () {
+
+        let dropdownMenu = $(this);
+        let allLis = dropdownMenu.children('li');
+        let columnOneUl = $('<ul>').addClass('column column-one');
+        let columnTwoUl = $('<ul>').addClass('column column-two');
+
+        allLis.each(function (index, listItem) {
+          let clonedLi = $(listItem).clone();
+          if (!clonedLi.hasClass('depth_1')) {
+            clonedLi.find('.link-class').prepend('<i class="fa fa-chevron-right"></i>');
+          }
+
+          if (clonedLi.hasClass('column-1')) {
+            columnOneUl.append(clonedLi);
+          } else if (clonedLi.hasClass('column-2')) {
+            columnTwoUl.append(clonedLi);
+          } else {
+            // If the li doesn't have column-1 or column-2 it should go into columnOneUl by default
+            columnOneUl.append(clonedLi);
+          }
+        });
+
+        dropdownMenu.empty().append(columnOneUl, columnTwoUl);
+      });
+    };</script>
+  <div class="single-story-top container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="breadcrumb stories"> <span property="itemListElement" typeof="ListItem"><a property="item"
+              typeof="WebPage" title="Go to Children with Cancer." href="https://www.childrenwithcancer.org.uk"
+              class="home"><span property="name">Home</span></a>
+            <meta property="position" content="1">
+          </span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage"
+              title="Go to Stories." href="https://www.childrenwithcancer.org.uk/stories/"
+              class="archive post-stories-archive"><span property="name">Stories</span></a>
+            <meta property="position" content="2">
+          </span> &gt; <span class="post post-stories current-item">Patient Story – Thomas D</span></div>
+      </div>
+      <div class="col-md-12">
+        <h1>Thomas' Acute Lymphoblastic Leukaemia Story</h1>
+      </div>
+    </div>
+  </div>
+  <div class="banner banner--single-story">
+    <div class="container">
+      <div class="row">
+        <div class="banner__content py-2">
+          <div class="col-sm-12 col-md-6">
+            <p>Thomas was diagnosed with <strong><a
+                  href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/cancer-types/acute-lymphoblastic-leukaemia/">acute
+                  lymphoblastic leukaemia </a></strong>on 4 May 2022 when he was just two years old. His mum Natalie
+              tells their story so far:</p>
+            <p>Support children like Thomas so that they have a future they deserve. </p> <span class="button"><a
+                href="#donate">Donate Now</a></span>
+          </div>
+          <div class="col-md-1">&nbsp;</div>
+          <div class="banner__image col-sm-12 col-md-5"> <svg class="banner__image-corner banner__image-corner-left"
+              viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.763 0.908691H2.81128C2.47637 0.908606 2.14472 0.974545 1.83528 1.10274C1.52584 1.23094 1.24466 1.41888 1.00782 1.65583C0.770968 1.89279 0.583087 2.17411 0.454903 2.48374C0.326718 2.79337 0.260742 3.12523 0.260742 3.46038L0.260742 75.9305C0.260742 81.5185 2.479 86.8777 6.42753 90.829C10.376 94.7803 15.7314 97.0001 21.3155 97.0001H75.4015C80.4916 97 85.4095 95.1545 89.2446 91.8053C93.0798 88.4561 95.5727 83.8299 96.2618 78.783C96.3063 78.4247 96.2739 78.061 96.1668 77.7161C96.0597 77.3713 95.8803 77.0533 95.6407 76.7833C95.401 76.5134 95.1066 76.2977 94.777 76.1506C94.4474 76.0036 94.0903 75.9285 93.7294 75.9305H23.8628C23.1863 75.9305 22.5376 75.6616 22.0593 75.183C21.5809 74.7043 21.3122 74.0551 21.3122 73.3782V3.46038C21.3122 2.78374 21.0437 2.13481 20.5656 1.65629C20.0875 1.17778 19.4391 0.908863 18.763 0.908691Z"
+                fill="#FF7621" />
+            </svg> <noscript><img width="768" height="440" src="2023/11/Thomas-in-toy-story-t-shirt-768x440.jpg"
+                class="attachment-image-content size-image-content wp-post-image" alt="Thomas in toy story t shirt"
+                decoding="async" /></noscript><img width="768" height="440"
+              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20768%20440%22%3E%3C/svg%3E'
+              data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/11/Thomas-in-toy-story-t-shirt-768x440.jpg"
+              class="lazyload attachment-image-content size-image-content wp-post-image"
+              alt="Thomas in toy story t shirt" decoding="async" /> <svg
+              class="banner__image-corner banner__image-corner-right" viewBox="0 0 58 58" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M46.5803 57.6547H56.1514C56.5573 57.6547 56.9465 57.4933 57.2335 57.2062C57.5204 56.919 57.6816 56.5295 57.6816 56.1234L57.6816 12.6417C57.6816 9.28889 56.3507 6.07341 53.9816 3.70263C51.6125 1.33184 48.3992 -4.95911e-05 45.0488 -4.95911e-05L12.5993 -4.95911e-05C9.54538 -1.90735e-05 6.59485 1.10707 4.29377 3.11633C1.99269 5.1256 0.496849 7.901 0.0830841 10.9289C0.0563622 11.1439 0.0757675 11.3621 0.140011 11.569C0.204254 11.7759 0.311855 11.9667 0.455631 12.1287C0.599407 12.2906 0.776054 12.4201 0.973782 12.5083C1.1715 12.5966 1.38577 12.6416 1.60226 12.6404L43.5173 12.6404C43.7185 12.6402 43.9177 12.6797 44.1036 12.7567C44.2895 12.8337 44.4584 12.9465 44.6006 13.0889C44.7429 13.2312 44.8557 13.4002 44.9326 13.5863C45.0095 13.7723 45.049 13.9716 45.0488 14.173L45.0488 56.1234C45.0488 56.3246 45.0884 56.5238 45.1654 56.7097C45.2424 56.8956 45.3552 57.0644 45.4975 57.2066C45.6397 57.3488 45.8085 57.4616 45.9943 57.5385C46.1801 57.6154 46.3792 57.6548 46.5803 57.6547Z"
+                fill="#FF9821" />
+            </svg></div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="donate" class="donate-block">
+          <div class="donate-block__item">
+            <div class="donate__img">
+              <img src="./pics/paypal.png" alt="">
+            </div>
+            <div class="donate__title">Paypal</div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                e-mail:
+              </span>
+              <span>
+                stanleyigb@gmail.com
+              </span>
+            </div>
+          </div>
+          <div class="donate-block__item">
+            <div class="donate__img">
+              <img src="./pics/monese.svg" alt="">
+            </div>
+            <div class="donate__title">Monese</div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Account-number:
+              </span>
+              <span>
+                34119721
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Sort code:
+              </span>
+              <span>
+                23-69-72
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Beneficiary:
+              </span>
+              <span>
+                Liudmyla Lipska
+              </span>
+            </div>
+          </div>
+          <div class="donate-block__item">
+            <div class="donate__img">
+              <img src="./pics/revolut.png" alt="">
+            </div>
+            <div class="donate__title">Revolut</div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Account-number:
+              </span>
+              <span>
+                56220073
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Sort code:
+              </span>
+              <span>
+                04-29-09
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Beneficiary:
+              </span>
+              <span>
+                Deniss Bondarevs
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Hash:
+              </span>
+              <span>
+                @dbondarevs
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Iban:
+              </span>
+              <span>
+                GB77REVO00997033304222
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Swift:
+              </span>
+              <span>
+                REVOGB21
+              </span>
+            </div>
+          </div>
+          <div class="donate-block__item">
+            <div class="donate__img">
+              <img src="./pics/wise.png" alt="">
+            </div>
+            <div class="donate__title">Wise</div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Account-number:
+              </span>
+              <span>
+                80974045
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Sort code:
+              </span>
+              <span>
+                23-14-70
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Beneficiary:
+              </span>
+              <span>
+                Deniss Bondarevs
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Hash:
+              </span>
+              <span>
+                @denissb69
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Iban:
+              </span>
+              <span>
+                GB76TRWI23147080974045
+              </span>
+            </div>
+            <div class="donate__text">
+              <span class="donate__mark">
+                Swift:
+              </span>
+              <span>
+                TRWIGB2LXXX
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div id="blog">
+      <div class="story">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-8 ">
+              <div class="content story-content">
+                <h3>The diagnosis </h3>
+                <p>We were out at an indoor play area where we noticed Thomas holding his tummy and saying he was
+                  getting tired. Thomas has so much energy, we thought that this was a bit odd. The following day,
+                  Thomas has tiny red spots on his thighs. We were unsure what they were so we went on as usual. We
+                  noticed they weren’t going away so we took him to A&amp;E. That evening we were told the news that
+                  Thomas is having to be blue lighted to hospital as the bloods came back as abnormal. This news broke
+                  myself and Thomas’ Daddy (Sam). We never thought this would happen. In May 2022, Thomas was diagnosed
+                  with <strong><a
+                      href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/cancer-types/acute-lymphoblastic-leukaemia/">Acute
+                      Lymphoblastic Leukaemia</a></strong>. The news shocked us as a family. Thomas had only just turned
+                  two years old.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 story-content-image-wrap"> <noscript><img width="305" height="285"
+                  src="2023/11/Thomas-in-bed-with-nose-tube-305x285.jpg" class="attachment-polaroid size-polaroid"
+                  alt="Thomas in bed with nose tube" decoding="async" /></noscript><img width="305" height="285"
+                src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20305%20285%22%3E%3C/svg%3E'
+                data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/11/Thomas-in-bed-with-nose-tube-305x285.jpg"
+                class="lazyload attachment-polaroid size-polaroid" alt="Thomas in bed with nose tube"
+                decoding="async" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="story">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-8 ">
+              <div class="content story-content">
+                <h3>Entering the maintenance stage </h3>
+                <p>The first part of his two-year<strong><a
+                      href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/understanding-cancer/treatments/#types-of-childhood-cancer-treatment">
+                      treatment</a></strong> plan was very intense: in and out of hospital, many procedures that had to
+                  be done under general anaesthetic and a lot of different <strong><a
+                      href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/understanding-cancer/treatments/chemotherapy/">chemotherapy</a></strong>.
+                  However, Thomas took it in his stride and smiled throughout it all. Since starting the treatment,
+                  Thomas has reacted so well and we have been so lucky that he hasn’t been very poorly with all the
+                  chemotherapy he has been on. The only time which was unexpected was when Thomas lost the use of his
+                  legs. He had to be carried everywhere which was horrible to see. After a few months of physiotherapy
+                  and having his lower legs in casts, Thomas eventually learnt how to walk again. But not just walking,
+                  running everywhere he goes!</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 story-content-image-wrap"> <noscript><img width="305" height="285"
+                  src="2023/11/Thomas-with-leg-casts-in-hospital-bed-305x285.jpg"
+                  class="attachment-polaroid size-polaroid" alt="Thomas with leg casts in hospital bed"
+                  decoding="async" /></noscript><img width="305" height="285"
+                src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20305%20285%22%3E%3C/svg%3E'
+                data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/11/Thomas-with-leg-casts-in-hospital-bed-305x285.jpg"
+                class="lazyload attachment-polaroid size-polaroid" alt="Thomas with leg casts in hospital bed"
+                decoding="async" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="story">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-8 ">
+              <div class="content story-content">
+                <h3>Living a new normal </h3>
+                <p>In March of 2023, Thomas entered the maintenance stage where we could start living our new normal.
+                  Thomas has gone back to nursery, making new friends. He has been incredible during this very difficult
+                  time and he really is a superhero. The first time we went home after the diagnosis was surreal.
+                  Starting our new normal was and still is extremely scary. The maintenance stage does come with its
+                  downsides and we still are going into hospital when Thomas gets a fever, which is every few months and
+                  can be rather frustrating. However, every day he wakes up with a smile and has so much energy.</p>
+                <p><em>Natalie, Thomas&#8217;s Mum, November 2023 </em></p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 story-content-image-wrap"> <noscript><img width="305" height="285"
+                  src="2023/11/Thomas-and-parents-at-the-zoo-305x285.jpeg" class="attachment-polaroid size-polaroid"
+                  alt="Thomas and parents at the zoo" decoding="async" /></noscript><img width="305" height="285"
+                src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20305%20285%22%3E%3C/svg%3E'
+                data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/11/Thomas-and-parents-at-the-zoo-305x285.jpeg"
+                class="lazyload attachment-polaroid size-polaroid" alt="Thomas and parents at the zoo"
+                decoding="async" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="story">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-8 ">
+              <div class="content story-content">
+                <h3>Update: March 2025 </h3>
+                <p>Thomas is now  8 months after the end of treatment and is now in Reception at primary school. He is
+                  thriving and doing things that a normal 5 year old does. He still has monthly appointments at hospital
+                  for check-ups and to see how he is doing. </p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 story-content-image-wrap"> <noscript><img width="305" height="285"
+                  src="2023/11/Screenshot-2025-03-04-at-10.31.03-305x285.png" class="attachment-polaroid size-polaroid"
+                  alt="Thomas in school uniform at the front door." decoding="async" /></noscript><img width="305"
+                height="285"
+                src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20305%20285%22%3E%3C/svg%3E'
+                data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2023/11/Screenshot-2025-03-04-at-10.31.03-305x285.png"
+                class="lazyload attachment-polaroid size-polaroid" alt="Thomas in school uniform at the front door."
+                decoding="async" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="story colour-block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 content-area">
+              <h3>How you can help</h3>
+              <p>If you’ve been touched by Thomas&#8217; journey, help us invest in the high quality research that
+                really matters which would otherwise go unfunded.</p>
+              <p>This helps to support children with cancer so they can be with their families for longer.</p>
+              <p><span class="button"><a href="#donate">Donate
+                    Now</a></span>       <span class="button"><a
+                    href="https://www.childrenwithcancer.org.uk/how-you-can-help/fundraising/">Fundraise Here</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="story">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-8 ">
+              <div class="content story-content">
+                <h3>Have you or a family member been affected by childhood cancer?</h3>
+                <p>Many of our supporters have been affected by childhood cancer – either through family, friends or
+                  their own personal experience. These patient stories can help inspire others to get involved with us,
+                  or can support our media work.</p>
+                <p>If you have a story that you would like to tell, <span class="button"><a
+                      href="mailto:stories@childrenwithcancer.org.uk">please contact us by email</a></span>.</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 story-content-image-wrap"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="carousel-area featured_posts featured_posts_flex block-gap-15">
+    <div class="excerpts">
+      <div class="container">
+        <div class="row featured_posts-row">
+          <div class="featured_posts_flex_row featured_carousel">
+            <div class="auto-featured-post col-md-4 featured_posts_flex_col item">
+              <div class="excerpt-block">
+                <div class="thumb"> <img src="2018/05/Coyle_555x688-768x475.jpg"
+                    data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2018/05/Coyle_555x688-768x475.jpg"
+                    alt="two kids hugging" /></div>
+                <div class="post resize bg_pale_pink">
+                  <div class="subtitle">
+                    <p class="font-large">Researching treatments for incurable brain cancer
+                    <p>
+                  </div>
+                  <p>Brain tumours are the second most common tumour in children (around 20% of all childhood cancers),
+                    and gliomas are the</p> <a
+                    href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/we-fund-research/projects-we-fund/treating-phgg-incurable-brain-cancer/"
+                    class="btn btn--secondary d-991">Read more</a>
+                </div> <a
+                  href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/we-fund-research/projects-we-fund/treating-phgg-incurable-brain-cancer/"
+                  class="btn btn--secondary d-992">Read more</a>
+              </div>
+            </div>
+            <div class="auto-featured-post col-md-4 featured_posts_flex_col item">
+              <div class="excerpt-block">
+                <div class="thumb"> <img src="2017/08/Charity-Ducky-1-768x475.jpg"
+                    data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2017/08/Charity-Ducky-1-768x475.jpg"
+                    alt="two kids hugging" /></div>
+                <div class="post resize bg_pale_pink">
+                  <div class="subtitle">
+                    <p class="font-large">Corporate Stories &#8211; DCUK
+                    <p>
+                  </div>
+                  <p>
+                  <p style="text-align: center;">DCUK, The Original Duck Company, has supported Children with Cancer UK
+                    for a number of years, selling a</p> <a href="https://www.childrenwithcancer.org.uk/stories/dcuk/"
+                    class="btn btn--secondary d-991">Read more</a>
+                </div> <a href="https://www.childrenwithcancer.org.uk/stories/dcuk/"
+                  class="btn btn--secondary d-992">Read more</a>
+              </div>
+            </div>
+            <div class="auto-featured-post col-md-4 featured_posts_flex_col item">
+              <div class="excerpt-block">
+                <div class="thumb"> <img src="2017/01/Middle-centre-About-germ-cell-tumours-768x475.jpg"
+                    data-src="https://www.childrenwithcancer.org.uk/wp-content/uploads/2017/01/Middle-centre-About-germ-cell-tumours-768x475.jpg"
+                    alt="two kids hugging" /></div>
+                <div class="post resize bg_pale_pink">
+                  <div class="subtitle">
+                    <p class="font-large">Finding ways to protect unborn babies from genetic damage
+                    <p>
+                  </div>
+                  <p>The genetic mutations that can lead to childhood leukaemia can happen before a baby is even born.
+                    Dr Ketan is</p> <a
+                    href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/we-fund-research/projects-we-fund/protecting-unborn-babies-genetic-damage/"
+                    class="btn btn--secondary d-991">Read more</a>
+                </div> <a
+                  href="https://www.childrenwithcancer.org.uk/childhood-cancer-info/we-fund-research/projects-we-fund/protecting-unborn-babies-genetic-damage/"
+                  class="btn btn--secondary d-992">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> <iframe id="newsletterIframe" src="https://cloud.email.childrenwithcancer.org.uk/newsletter-iframe"
+    scrolling="no" style="width: 100%; border: none; overflow: hidden;"></iframe>
+  <script>// Function to adjust the iframe height 
+    function adjustIframeHeight(event) {
+      const iframe = document.getElementById('newsletterIframe');
+      const allowedOrigin = 'https://cloud.email.childrenwithcancer.org.uk';
+
+      if (event.origin === allowedOrigin) {
+        const height = parseInt(event.data);
+        if (!isNaN(height) && height > 0) {
+          iframe.style.height = height + 'px';
+        }
+      }
+    }
+
+    // Listen for messages from the iframe 
+    window.addEventListener('message', adjustIframeHeight, false);</script>
+  <footer class="">
+    <div class=" container ">
+      <div class="row">
+        <div class=" col-md-6 ">
+          <div id="text-2" class="widget widget_text">
+            <div class="textwidget">
+              <p>© 2025 Children with Cancer UK. Third floor, 21-27 Lamb&#8217;s Conduit Street, Holborn, London, WC1N
+                3NL. Registered Charity Number: 298405</p>
+            </div>
+          </div>
+          <div id="nav_menu-2" class="widget widget_nav_menu">
+            <div class="menu-footer-container">
+              <ul id="menu-footer" class="menu">
+                <li id="menu-item-5346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5346">
+                  <a href="https://www.childrenwithcancer.org.uk/privacy-policy/">Privacy policy</a>
+                </li>
+                <li id="menu-item-5347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5347">
+                  <a href="https://www.childrenwithcancer.org.uk/terms-and-conditions/">Terms and conditions</a>
+                </li>
+                <li id="menu-item-446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-446"><a
+                    href="https://www.childrenwithcancer.org.uk/site-map/">Site map</a></li>
+                <li id="menu-item-28789"
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28789"><a
+                    href="https://www.childrenwithcancer.org.uk/about-us/job-opportunities/">Job opportunities</a></li>
+                <li id="menu-item-28788"
+                  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28788"><a
+                    href="https://www.childrenwithcancer.org.uk/story-category/media-centre/">Media centre</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="logos  col-md-6 ">
+          <div class="fr-logo"> <noscript><img class="img-responsive"
+                src="cwc-reskin-2022/images/reskin-2022/fundraising_regulator_1.svg" width="148"
+                height="45" /></noscript><img class="lazyload img-responsive"
+              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20148%2045%22%3E%3C/svg%3E'
+              data-src="https://www.childrenwithcancer.org.uk/wp-content/themes/cwc-reskin-2022/images/reskin-2022/fundraising_regulator_1.svg"
+              width="148" height="45" /> <noscript><img class="img-responsive"
+                src="cwc-reskin-2022/images/reskin-2022/amrc-logo_1.svg" width="126" height="40"
+                style="margin-left: 15px;" /></noscript><img class="lazyload img-responsive"
+              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20126%2040%22%3E%3C/svg%3E'
+              data-src="https://www.childrenwithcancer.org.uk/wp-content/themes/cwc-reskin-2022/images/reskin-2022/amrc-logo_1.svg"
+              width="126" height="40" style="margin-left: 15px;" /> <noscript><img class="img-responsive"
+                src="cwc-reskin-2022/images/reskin-2022/ce-logo.png" width="126" height="40"
+                style="margin-left: 15px;" /></noscript><img class="lazyload img-responsive"
+              src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20126%2040%22%3E%3C/svg%3E'
+              data-src="https://www.childrenwithcancer.org.uk/wp-content/themes/cwc-reskin-2022/images/reskin-2022/ce-logo.png"
+              width="126" height="40" style="margin-left: 15px;" /></div>
+        </div>
+      </div>
+    </div>
+  </footer> <noscript>
+    <style>
+      .lazyload {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script
+    data-noptimize="1">window.lazySizesConfig = window.lazySizesConfig || {}; window.lazySizesConfig.loadMode = 1;</script>
+  <script async data-noptimize="1" src='autoptimize/classes/external/js/lazysizes.min.js@ao_version=3.1.12'></script>
+  <script defer type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.6.2/parsley.min.js"></script>
+  <script defer type="text/javascript" src="cwc-reskin-2022/js/imagesloaded.min.js"></script>
+  <script defer type="text/javascript" src="cwc-reskin-2022/js/bootstrap.min.js"></script>
+  <script defer type="text/javascript" src="cwc-reskin-2022/js/respond.min.js"></script>
+  <script defer type="text/javascript" src="cwc-reskin-2022/js/jquery.waypoints.min.js"></script>
+  <script defer type="text/javascript" src="cwc-reskin-2022/js/sticky.min.js"></script>
+  <script defer type="text/javascript" src="cwc-reskin-2022/js/jquery.placeholder.min.js"></script>
+  <script type="text/javascript" src="cwc-reskin-2022/js/slick/slick.min.js"></script>
+  <script defer type="text/javascript" src="cwc-reskin-2022/js/scripts.min.js"></script>
+  <script>$(document).ready(function () {
+      //adding this snippet to remove the bug where dates get an inline datepicker..
+      $('.date .ui-datepicker').remove();
+    })
+    /*** Search bar ***/
+
+    $('.search-btn').click(function () {
+      $("i", this).toggleClass("fa-search fa-close");
+      $(".dropdown-menu", this).toggleClass('active').slideToggle("fast", function () { });
+
+      $(".dropdown-menu").click(function (e) {
+        e.stopPropagation();
+      });
+    });
+
+
+    /*** Mobile social icons ***/
+
+    $('#arrow').on('click', function (e) {
+      $(this).toggleClass('active');
+      $('.mobile-social').toggleClass('active');
+    });
+
+    /*accordian arrow*/
+    $('.accordian button.section').click(function () {
+      $(this).toggleClass('go-down');
+
+    });</script>
+  <script type="text/javascript">function validate_signup(frm, showAlert) {
+      const recaptcha = grecaptcha.getResponse();
+
+      if (recaptcha) {
+        var data = {
+          'action': 'validate_recaptcha',
+          'recaptcha': recaptcha
+        };
+        console.log("ReCAPTCHA response token:", recaptcha);
+
+        jQuery.post(ajaxurl, data, function (response) {
+          console.log(response);
+          if (response == 'success') {
+            var emailAddress = frm.email.value;
+            var errorString = '';
+            if (emailAddress == '' || emailAddress.indexOf('@') == -1) {
+              errorString = 'Please enter your email address';
+            }
+            var checkBoxValue = frm.ci_userConsentCheckBox.checked;
+            if (!checkBoxValue && showAlert) {
+              errorString += (errorString.length > 0 ? '\n' : '') + 'You must accept the terms';
+            }
+            if (errorString.length > 0) {
+              if (showAlert) alert(errorString);
+            } else {
+              // Prepare formData for AJAX submission
+              var newsletterFormData = {
+                'action': 'submit_newsletter_form',
+                'cd_FIRSTNAME': frm.FIRSTNAME.value,
+                'cd_LASTNAME': frm.LASTNAME.value,
+                'email': emailAddress,
+                'consent': checkBoxValue,
+                'nonce': 'a7e9f67872'
+                // Include other form data as needed
+              };
+
+              // Call the new function for AJAX submission
+              submitFormWithAjax(newsletterFormData);
+            }
+          } else {
+            if (showAlert) alert('ReCAPTCHA validation failed, please try again.');
+            $('#signup').removeClass('loading');
+          }
+        });
+      } else {
+        if (showAlert) alert('Please complete the reCAPTCHA');
+        $('#signup').removeClass('loading');
+      }
+    }
+
+    function submitFormWithAjax(formData) {
+      jQuery.ajax({
+        type: 'POST',
+        url: ajaxurl,
+        data: formData,
+        success: function (response) {
+          console.log('Server response:', response);
+          if (response.success) {
+            // alert('Thank you for subscribing!');
+            let returnUrl = window.location.href.split('#')[0];
+            console.log(response.data);
+            if (returnUrl) {
+              // ?result=success#newsletterIframe
+              // add ?result=success
+              if (returnUrl.indexOf('?') > -1) {
+                returnUrl += '&result=success#newsletterIframe';
+              } else {
+                returnUrl += '?result=success#newsletterIframe';
+              }
+              window.location.href = returnUrl; // Redirect to the specified URL
+            }
+          } else {
+            alert('There was an error. Please try again.');
+          }
+        },
+        error: function (xhr, status, error) {
+          console.error('AJAX Error:', status, error, 'XHR:', xhr.responseText);
+          alert('Submission error. Please try again.');
+        },
+        complete: function () {
+          $('#signup').removeClass('loading');
+        }
+      });
+    }
+
+    // Binding the validate_signup function to the form submission
+    $('#signup').off('submit').on('submit', function (event) {
+      if ($('#signup').hasClass('loading')) {
+        return false;
+      }
+      event.preventDefault(); // Prevent the default form submission
+      event.stopPropagation(); // Prevent the form from bubbling up the DOM
+      $('#signup').addClass('loading');
+
+      validate_signup(this, true);
+    });</script>
+</body>
+
+</html>

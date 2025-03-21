@@ -1,0 +1,52 @@
+
+
+.donate-block {
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	padding-bottom: 100px;
+}
+
+.donate-block__item {
+	display: flex;
+	flex-direction: column;
+}
+
+.donate__text {
+	color: #704bfd;
+}
+
+.donate__title {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+.donate__img {
+	max-width: 100px;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+
+
+.donate__img img {
+	width: 100%;
+	object-fit: contain;
+	border-radius: 6px;
+}
+
+.donate__mark {
+	color: #fa6221;
+}
+
+@media (max-width: 1080px) {
+	.donate-block {
+		flex-direction: column;
+		gap: 60px;
+	}
+	.donate-block__item {
+		align-items: center;
+	}
+}
